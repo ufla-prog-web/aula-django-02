@@ -1,7 +1,3 @@
-# aula-django-02
-
-Este projeto mostra um sistema para gestão de biblioteca desenvolvido com o framework Python Django
-
 # Sistema para Portal Biblioteca
 
 <p align="center">
@@ -16,7 +12,7 @@ Este projeto mostra um sistema para gestão de biblioteca desenvolvido com o fra
   </a>
 </p>
 
-Projeto utilizando o Django desenvolvido na Aula de GAC116 - Programação Web.
+Aula Djando 02. Projeto utilizando o Django para ser desenvolvido na Aula de GAC116 - Programação Web.
 
 O objetivo desse projeto é criar um sistema para gestão de biblioteca.
 
@@ -45,21 +41,17 @@ Este tutorial foi elaborado baseado no tutorial disponível no [curso de django 
 
 ## Comandos utilizados na criação deste projeto
 
-### Criação da Pasta do Projeto [Remover Tópico]
+### Baixando o Repositório
 
-Inicilamente, crie a pasta do projeto:
+Inicilamente, baixe o repositório do [link](https://github.com/ufla-prog-web/aula-django-02) clicando em `Code` e `Download ZIP`.
+
+### Criação da Pasta do Projeto
+
+Em seguida, crie a pasta do projeto dentro da pasta baixada do github:
 
 ```bash
 mkdir portal_biblioteca
 cd portal_biblioteca/
-```
-
-### Clonando o Repositório
-
-Inicilamente, clone o repositório:
-
-```bash
-git clone https://github.com/jesimar/portal_biblioteca.git
 ```
 
 ### Instalação do Python
