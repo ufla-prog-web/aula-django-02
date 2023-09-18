@@ -6,7 +6,7 @@ Este projeto mostra um sistema para gestão de biblioteca desenvolvido com o fra
 
 <p align="center">
   <a href="#">
-    <img src="https://img.shields.io/badge/Aula-Biblioteca-Parte1-brightgreen.svg" alt="Aula-Biblioteca-Parte1">
+    <img src="https://img.shields.io/badge/Aula-Biblioteca-brightgreen.svg" alt="Aula-Biblioteca">
   </a>
   <a href="#">
     <img src="https://img.shields.io/badge/Python-blue.svg" alt="Python">
