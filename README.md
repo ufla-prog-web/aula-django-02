@@ -964,7 +964,7 @@ Em seguida, execute o projeto django:
 
 Em seguida, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000`) e teste o sistema.
 
-### Incluindo código JavaScript no Projeto
+### Incluindo Código JavaScript no Projeto
 
 Até o presente momento não temos código javascript no nosso projeto. A fim de ilustração iremos fazer uma pequena tela de dashboard em nosso projeto com gráficos em JavaScript.
 
@@ -1042,6 +1042,8 @@ Agora reinicie o servidor:
 Agora volte para o navegador e atualize a barra de endereço [127.0.0.1:8000/dashboard](127.0.0.1:8000/dashboard)
 
 Analise a página de dashboard construída.
+
+### Modularizando o Código JavaScript no Projeto
 
 Agora, iremos modularizar o nosso código melhor.
 
