@@ -63,6 +63,8 @@ Fonte: [https://blog.grancursosonline.com.br/arquitetura-em-tres-camadas-para-ap
 
 ## Objetivo da Aula
 
+A animação abaixo mostra de forma visual o resultado esperado nesta aula.
+
 ![Sistema Objetivo da Aula](./docs/objetivo.gif)
 
 ## Comandos utilizados na criação deste projeto
