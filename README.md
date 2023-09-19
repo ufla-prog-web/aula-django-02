@@ -39,15 +39,45 @@ Este tutorial foi elaborado baseado no tutorial disponível no [curso de django 
 * Pip - [link](https://pypi.org/project/pip/)
 * VirtualEnv - [link](https://virtualenv.pypa.io/)
 
+## Arquitetura Web
+
+### Arquitetura Geral das Aplicação Web
+
+![Arquitetura das Aplicações Web](./docs/arquitetura-web.png)
+
+Fonte: [https://blog.grancursosonline.com.br/arquitetura-em-tres-camadas-para-aplicacoes-web/](https://blog.grancursosonline.com.br/arquitetura-em-tres-camadas-para-aplicacoes-web/)
+
+## Arquitetura Django
+
+### Arquitetura MVT - Geral
+
+![Arquitetura MVT - Geral](./docs/mvt-1.png)
+
+### Arquitetura MVT - Requisição
+
+![Arquitetura MVT - Requisição](./docs/mvt-2.png)
+
+### Arquitetura MVT - Detalhes
+
+![Arquitetura MVT - Detalhes](./docs/mvt-3.png)
+
 ## Comandos utilizados na criação deste projeto
 
 ### Baixando o Repositório
 
 Inicilamente, baixe o repositório do [link](https://github.com/ufla-prog-web/aula-django-02) clicando em `Code` e `Download ZIP`.
 
+### Clonando o Repositório
+
+Caso deseje ao invês de baixar o repositório (método acima), clone o repositório da seguinte forma:
+
+```bash
+git clone https://github.com/ufla-prog-web/aula-django-02.git
+```
+
 ### Criação da Pasta do Projeto
 
-Em seguida, crie a pasta do projeto dentro da pasta baixada do github:
+Em seguida, crie a pasta do projeto (`portal_biblioteca`) dentro da pasta baixada do github (`aula-django-02`):
 
 ```bash
 mkdir portal_biblioteca
@@ -86,10 +116,22 @@ Se necessário, instale o virtualenv (testado na versão 20.24.1):
 pip3 install virtualenv
 ```
 
+ou
+
+```bash
+python3 -m pip install --user virtualenv
+```
+
 Verifique a versão instalada do virtualenv (para ter certeza que tudo ocorreu bem):
 
 ```bash
 virtualenv --version
+```
+
+ou
+
+```bash
+python3 -m virtualenv --version
 ```
 
 ### Criação do Ambiente Virtual
@@ -128,10 +170,28 @@ Instale o django dentro do ambiente virtual criado (testado na versão 4.2.5):
 (venv) ... $ pip3 install django
 ```
 
+ou
+
+```bash
+(venv) ... $ python -m pip install Django
+```
+
 Verifique a versão instalada do django (para ter certeza que tudo ocorreu bem):
 
 ```bash
 (venv) ... $ django-admin --version
+```
+
+ou
+
+```bash
+(venv) ... $ python3 -m django --version
+```
+
+**OBS:** Caso o terminal não encontre o django-admin, execute o seguinte comando abaixo (utilizado geralmente quando não se utiliza o VirtualEnv no laboratório DCC07):
+
+```bash
+export PATH=$PATH:~/.local/bin
 ```
 
 ### Criação do Projeto Django
@@ -149,6 +209,8 @@ Inicie a execução do projeto django criado:
 ```bash
 (venv) ... $ python3 manage.py runserver
 ```
+
+**Explicação:** O comando acima é usado no Django para iniciar um servidor de desenvolvimento local. Ele é uma parte fundamental do processo de desenvolvimento web com o Django, pois permite que você execute e teste sua aplicação web em um ambiente de desenvolvimento local antes de implantá-la em um servidor web de produção. Ele inicia um servidor HTTP embutido no Django que pode lidar com solicitações HTTP. Por padrão, o servidor de desenvolvimento escuta na porta 8000, mas você pode especificar uma porta diferente como argumento opcional, por exemplo, `python3 manage.py runserver 8081`.
 
 Acesse através do navegdor web a página [http://127.0.0.1:8000/](http://127.0.0.1:8000/). Uma página padrão do django deve aparecer.
 
@@ -261,6 +323,8 @@ Em seguida, execute este comando:
 (venv) ... $ python3 manage.py migrate
 ```
 
+**OBS:** Este comando aplica as migrações, ou seja, atualiza o esquema do banco de dados de acordo com as mudanças nos modelos.
+
 Em seguida, execute o projeto django (veja se está tudo funcionando):
 
 ```bash
@@ -317,8 +381,8 @@ Em seguida, crie um arquivo HTML com nome `principal.html` na pasta `templates` 
             <a href="/livros">LIVROS</a> |
             <a href="/tccs">TCCs</a> |
             <a href="/dashboard">DASHBOARD</a> |
-            <a href="/login">LOGIN</a> |
-            <a href="/cadastre-se">CADASTRE-SE</a>
+            <a href="/auth/login">LOGIN</a> |
+            <a href="/auth/cadastro">CADASTRE-SE</a>
         </div>
         <div class="main">
             <h1>Portal Biblioteca</h1>
@@ -419,7 +483,7 @@ Em seguida, execute o seguinte comando abaixo:
 (venv) ... $ python3 manage.py collectstatic
 ```
 
-OBS: O comando acima informa ao Django para entrar nas pastas com arquivos estáticos e fazer uma cópia de todos os arquivos dessas pastas para a pasta `productionfiles`.
+**Explicação:** O comando acima informa ao Django para entrar nas pastas com arquivos estáticos e fazer uma cópia de todos os arquivos dessas pastas para a pasta `productionfiles`. Os arquivos estáticos incluem, por exemplo, arquivos CSS, JavaScript, imagens e outros recursos que não são gerados dinamicamente pelo Django, mas são servidos diretamente pelo servidor web. A principal finalidade do comando `collectstatic` é preparar os arquivos estáticos para implantação em um ambiente de produção. Quando você está desenvolvendo localmente, os arquivos estáticos podem estar espalhados em diferentes diretórios dentro de cada aplicativo, o que não é eficiente para servir em produção. Portanto, você coleta todos esses arquivos em um único local antes de implantar sua aplicação em um servidor web de produção.
 
 Em seguida, execute o projeto django:
 
@@ -537,8 +601,8 @@ Em seguida, crie um arquivo HTML com nome `livros.html` na pasta `templates` com
             <a href="/livros">LIVROS</a> |
             <a href="/tccs">TCCs</a> |
             <a href="/dashboard">DASHBOARD</a> |
-            <a href="/login">LOGIN</a> |
-            <a href="/cadastre-se">CADASTRE-SE</a>
+            <a href="/auth/login">LOGIN</a> |
+            <a href="/auth/cadastro">CADASTRE-SE</a>
         </div>
         <div class="mycard">
             <h1>Livros</h1>
@@ -645,8 +709,8 @@ Em seguida, crie um arquivo HTML com nome `tccs.html` na pasta `templates` com o
             <a href="/livros">LIVROS</a> |
             <a href="/tccs">TCCs</a> |
             <a href="/dashboard">DASHBOARD</a> |
-            <a href="/login">LOGIN</a> |
-            <a href="/cadastre-se">CADASTRE-SE</a>
+            <a href="/auth/login">LOGIN</a> |
+            <a href="/auth/cadastro">CADASTRE-SE</a>
         </div>
         <div class="mycard">
             <h1>Trabalhos de Conclusão de Curso</h1>
@@ -754,8 +818,8 @@ Em seguida, crie um arquivo HTML com nome `tcc_detalhes.html` na pasta `template
             <a href="/livros">LIVROS</a> |
             <a href="/tccs">TCCs</a> |
             <a href="/dashboard">DASHBOARD</a> |
-            <a href="/login">LOGIN</a> |
-            <a href="/cadastre-se">CADASTRE-SE</a>
+            <a href="/auth/login">LOGIN</a> |
+            <a href="/auth/cadastro">CADASTRE-SE</a>
         </div>
         <div class="mycard">
             <h1>Trabalho de Conclusão de Curso</h1>
@@ -814,8 +878,8 @@ Comece criando um template chamado `base.html` dentro da pasta `template`, com o
             <a href="/livros">LIVROS</a> |
             <a href="/tccs">TCCs</a> |
             <a href="/dashboard">DASHBOARD</a> |
-            <a href="/login">LOGIN</a> |
-            <a href="/cadastre-se">CADASTRE-SE</a>
+            <a href="/auth/login">LOGIN</a> |
+            <a href="/auth/cadastro">CADASTRE-SE</a>
         </div>
         {% block conteudo %}
         {% endblock %}
@@ -937,6 +1001,8 @@ Em seguida, execute o código abaixo para que seja criado a tabela Livro no banc
 (venv) ... $ python3 manage.py makemigrations biblioteca
 ```
 
+**OBS:** Após definir os modelos, você cria migrações com este comando. Isso cria arquivos de migração que descrevem como o banco de dados deve ser modificado para refletir as alterações nos modelos.
+
 O que resultará nesta saída:
 
 ```bash
@@ -954,6 +1020,8 @@ Execute o comando de migração:
 ```bash
 (venv) ... $ python3 manage.py migrate
 ```
+
+**OBS:** Este comando aplica as migrações, ou seja, atualiza o esquema do banco de dados de acordo com as mudanças nos modelos.
 
 O que resultará nesta saída:
 
@@ -1619,7 +1687,7 @@ Analise a página de dashboard construída.
 
 Para mais informações sobre gráficos em javacript consulte a documentação da biblioteca [chart.js](https://www.chartjs.org/).
 
-### Adicionando Aplicação de Controle de Usuários no Django
+### Adicionando Controle de Usuários no Django
 
 O Django possui já prontos diversos recursos para trabalhar com autenticação de usuários e controle de nível de acesso.
 
@@ -1668,7 +1736,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path('', include('biblioteca.urls')),
-    path('', include('usuarios.urls')),  #adicione essa linha aqui
+    path('auth/', include('usuarios.urls')),   #adicione essa linha aqui
     path('admin/', admin.site.urls),
 ]
 ```
@@ -1687,6 +1755,37 @@ def cadastro(request):
     template = loader.get_template('cadastro.html')
     return HttpResponse(template.render())
 ```
+
+Agora, iremos criar uma pasta chamada `templates` dentro da aplicação `usuarios`. Nesta pasta, iremos criar um arquivo chamado `login.html` com o seguinte conteúdo:
+
+```html
+<h1>Login</h1>
+```
+
+Nesta pasta, iremos criar um arquivo chamado `cadastro.html` com o seguinte conteúdo:
+
+```html
+<h1>Cadastro</h1>
+```
+
+Agora reinicie o servidor:
+
+```bash
+(venv) ... $ python3 manage.py runserver
+```
+
+Agora volte para o navegador e atualize a barra de endereço [127.0.0.1:8000/](127.0.0.1:8000/). Navegue pelas abas Login e Cadastre-se.
+
+### Melhorando as Telas de Login e Cadastro
+
+Agora, iremos definir melhor as telas de Login e Cadastro. Começaremos com a tela de Cadastro primeiro.
+
+No arquivo `cadastro.html` digite o seguinte:
+
+```html
+
+```
+
 
 ### Algumas Informações Adicionais
 
