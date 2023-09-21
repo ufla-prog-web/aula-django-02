@@ -16,7 +16,7 @@ Aula Djando 02. Projeto utilizando o Django para ser desenvolvido na Aula de GAC
 
 O objetivo desse projeto é criar um sistema para gestão de biblioteca.
 
-Este tutorial foi elaborado baseado no tutorial disponível no [curso de django da w3schools](https://www.w3schools.com/django/index.php).
+Este tutorial foi elaborado baseado no tutorial disponível no [curso de django da w3schools](https://www.w3schools.com/django/index.php) e também baseado na [documentação oficial do django](https://docs.djangoproject.com/en/4.2/).
 
 ## Linguagens Utilizadas
 
@@ -33,11 +33,11 @@ Este tutorial foi elaborado baseado no tutorial disponível no [curso de django 
 
 ## Ferramentas Utilizadas
 
+* Pip - [link](https://pypi.org/project/pip/)
+* VirtualEnv - [link](https://virtualenv.pypa.io/)
 * Visual Studio Code - [link](https://code.visualstudio.com/)
 * SQLite Online - [link](https://sqliteonline.com/)
 * DB Browser for SQLite - [link](https://sqlitebrowser.org/)
-* Pip - [link](https://pypi.org/project/pip/)
-* VirtualEnv - [link](https://virtualenv.pypa.io/)
 
 ## Arquitetura Web
 
@@ -271,7 +271,7 @@ urlpatterns = [
 ]
 ```
 
-Existe um arquivo chamado `urls.py` na pasta `biblioteca`, abra esse arquivo e coloque o seguinte conteúdo nesse arquivo.
+Existe um arquivo chamado `urls.py` na pasta `portal_biblioteca`, abra esse arquivo e coloque o seguinte conteúdo nesse arquivo.
 
 ```python
 from django.contrib import admin
