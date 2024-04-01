@@ -45,7 +45,6 @@ Este tutorial foi elaborado baseado no tutorial disponível no [curso de django 
 * Chart.js - Biblioteca JavaScript para Gráficos
     * [link do site do chart.js](https://www.chartjs.org/)
 
-
 ## Ferramentas Utilizadas
 
 * Visual Studio Code - IDE - [link](https://code.visualstudio.com/)
@@ -128,14 +127,14 @@ Abra a IDE Visual Studio Code na pasta `aula-django-02`.
 
 **Dica:** Abra o arquivo `README.md` e clique em `Open Preview to the Side` para facilitar a construção da aplicação.
 
-**Dica:** Abra um terminal utilizando a IDE clicando em `Terminal` e `New Terminal`. Navegue até a pasta `portal_biblioteca`.
+**Dica:** Abra um terminal utilizando a IDE clicando em `Terminal` e `New Terminal`.
 
 ### Criando a Pasta do Projeto
 
 Em seguida, crie a pasta do projeto (`portal_biblioteca`) dentro da pasta baixada do github (`aula-django-02`):
 
 ```bash
-cd aula-django-02
+cd aula-django-02/
 mkdir portal_biblioteca
 cd portal_biblioteca/
 ```
