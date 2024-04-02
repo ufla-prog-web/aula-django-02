@@ -59,8 +59,6 @@ Este tutorial foi elaborado baseado no tutorial disponível no [curso de django 
 
 ![Arquitetura das Aplicações Web](./docs/arquitetura-web.png)
 
-Fonte: [https://blog.grancursosonline.com.br/arquitetura-em-tres-camadas-para-aplicacoes-web/](https://blog.grancursosonline.com.br/arquitetura-em-tres-camadas-para-aplicacoes-web/)
-
 ## Arquitetura de um Projeto Django
 
 ### Arquitetura MVT - Geral
@@ -180,6 +178,10 @@ Quando desejar sair do ambiente virtual, basta digitar:
 deactivate
 ```
 
+### Fluxo de Trabalho no Django
+
+[![](https://mermaid.ink/img/pako:eNqN1E1y2yAUB_CrMHThTVLvveiMbcnfX9Nm0UTKgkrPDikCFZBTNxPfJaseoNMT-GJ9Qq5DNSyqlfjzAwF6wzPNVA60R7dCPWUPTFtyE6WS4NNPUjqVxjLBTj9Pv8GQFWRgzOlVc2ZSek-urz-QAaohBppstHoEq4hUJHpkcqeQNDMNnBxeZL8sA2roVJR0U9q3FRP8B9KOAWu53Jn35aGT0jQ948jhuIUL3Is40-5Zxk6Oaum-3n3zN1CUglkwb3rk9Dik-_pbxffKkNjY06vlmfLGjd24SWs9ew5PreVMHJyGPtCpdHvxU6dnrWlZXnDZOpCZk_P_O725w4sax98hq2xtMyUEZBZ_OO7N1wunl__qgn2Fgu80YiWNz5eOr1rcUfDdyrl14jNdSQN6D7pzKYu1YxtkfYnbMsg-gqmEZbmrtRXbww7ftRvRjNk0Bec3Ir8R-42R3xj7jYnfmNaTN8HnZP1F8x2zp1-aq3tyPB7JbdJdlxmeBRN_f95t3XGHecaM63Bbb_qMPQhAseVC9N6NooEfx-F4FI7H4XgSjqft2O-8u3RGfhyF41k4nofjRThehuOVH9MrWoAuGM_xonquWUrtAxSQ0h6-5rBlWA9YWvIFKaus-nSQGe1ZXcEVrcocKy_iDCuwoL0tEwZTyLlVetlcfu4OfPkDBV6NXw?type=png)](https://mermaid.live/edit#pako:eNqN1E1y2yAUB_CrMHThTVLvveiMbcnfX9Nm0UTKgkrPDikCFZBTNxPfJaseoNMT-GJ9Qq5DNSyqlfjzAwF6wzPNVA60R7dCPWUPTFtyE6WS4NNPUjqVxjLBTj9Pv8GQFWRgzOlVc2ZSek-urz-QAaohBppstHoEq4hUJHpkcqeQNDMNnBxeZL8sA2roVJR0U9q3FRP8B9KOAWu53Jn35aGT0jQ948jhuIUL3Is40-5Zxk6Oaum-3n3zN1CUglkwb3rk9Dik-_pbxffKkNjY06vlmfLGjd24SWs9ew5PreVMHJyGPtCpdHvxU6dnrWlZXnDZOpCZk_P_O725w4sax98hq2xtMyUEZBZ_OO7N1wunl__qgn2Fgu80YiWNz5eOr1rcUfDdyrl14jNdSQN6D7pzKYu1YxtkfYnbMsg-gqmEZbmrtRXbww7ftRvRjNk0Bec3Ir8R-42R3xj7jYnfmNaTN8HnZP1F8x2zp1-aq3tyPB7JbdJdlxmeBRN_f95t3XGHecaM63Bbb_qMPQhAseVC9N6NooEfx-F4FI7H4XgSjqft2O-8u3RGfhyF41k4nofjRThehuOVH9MrWoAuGM_xonquWUrtAxSQ0h6-5rBlWA9YWvIFKaus-nSQGe1ZXcEVrcocKy_iDCuwoL0tEwZTyLlVetlcfu4OfPkDBV6NXw)
+
 ### Instalando o Django
 
 Instale o django dentro do ambiente virtual criado (testado na versão 5.0.3):
@@ -256,13 +258,13 @@ django-admin startapp biblioteca
 
 * **Templates:** Arquivos de templates que definem a aparência das páginas da web. Os templates são usados pelas views para renderizar o conteúdo dinâmico que será enviado ao navegador do usuário.
 
-* **URLs:** Mapeiam as URLs do site para as views correspondentes. Cada aplicação geralmente tem seu próprio arquivo urls.py para definir os padrões de URL específicos dessa aplicação.
-
 * **Arquivos Estáticos (opcional):** Como CSS, JavaScript e imagens, que são usados para estilizar e adicionar interatividade às páginas da web.
+
+* **URLs:** Mapeiam as URLs do site para as views correspondentes. Cada aplicação geralmente tem seu próprio arquivo urls.py para definir os padrões de URL específicos dessa aplicação.
 
 ### Criando a Primeira View no Django
 
-Edite o arquivo de `views.py` (na pasta `biblioteca`) e coloque o seguinte conteúdo:
+Primeiramente, edite o arquivo de `views.py` (na pasta `biblioteca`) e coloque o seguinte conteúdo:
 
 ```python
 from django.shortcuts import render
@@ -301,11 +303,11 @@ Em seguida, execute o projeto django (veja se está tudo funcionando):
 python3 manage.py runserver
 ```
 
-Acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000).
+Por fim, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000) e analise o resultado.
 
 ### Criando o Primeiro Template no Django
 
-Crie uma pasta `templates` dentro da pasta `biblioteca` e crie um arquivo HTML chamado `principal.html`.
+Primeiramente, crie uma pasta `templates` dentro da pasta `biblioteca` e crie um arquivo HTML chamado `principal.html`.
 
 Abra o arquivo HTML e insira o seguinte:
 
@@ -322,7 +324,7 @@ Abra o arquivo HTML e insira o seguinte:
 </html>
 ```
 
-Agora é necessário modificar a visualização. Abra o arquivo `views.py` e substitua o método de visualização `principal` por este:
+Agora, é necessário modificar a visualização. Abra o arquivo `views.py` e substitua o método de visualização `principal` por este:
 
 ```python
 from django.http import HttpResponse
@@ -361,7 +363,7 @@ Em seguida, execute o projeto django (veja se está tudo funcionando):
 python3 manage.py runserver
 ```
 
-Acesse a URL [http://127.0.0.1:8000/](http://127.0.0.1:8000/`).
+Por fim, acesse a URL [http://127.0.0.1:8000/](http://127.0.0.1:8000/`) e analise o resultado.
 
 ### Melhorando as Telas do Django
 
@@ -495,7 +497,7 @@ Em seguida, execute o projeto django:
 python3 manage.py runserver
 ```
 
-Em seguida, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000`)
+Por fim, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000`) e analise o resultado.
 
 **OBS:** Repare que os links para as outras páginas ainda não funcionam. Isso é esperado visto que ainda não criamos as outras páginas e rotas.
 
@@ -503,12 +505,44 @@ Em seguida, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000`)
 
 Agora, iremos criar a tela da página de Livros do nosso sistema.
 
-Assim, edite o arquivo `views.py` na pasta `biblioteca` e adicione o seguinte conteúdo ao final do arquivo:
+Assim, crie um arquivo HTML com nome `livros.html` na pasta `templates` com o seguinte conteúdo:
+
+```html
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'mystyles.css' %}"> 
+        <title>Portal Biblioteca - Livros</title>
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="/">PRINCIPAL</a> |
+            <a href="/livros">LIVROS</a> |
+            <a href="/tccs">TCCs</a> |
+            <a href="/dashboard">DASHBOARD</a> |
+            <a href="/auth/login">LOGIN</a> |
+            <a href="/auth/cadastro">CADASTRE-SE</a>
+        </div>
+        <div class="mycard">
+            <h1>Livros</h1>
+            <ul>
+                {% for l in livros %}
+                <li>{{ l.nome }} | {{ l.autor }} | {{ l.ano }} </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </body>
+</html>
+```
+
+Em seguida, edite o arquivo `views.py` na pasta `biblioteca` e adicione o seguinte conteúdo ao final do arquivo:
 
 ```python
 ...
 
-def livros(request):
+def livros(request):      # função adicionada
     template = loader.get_template('livros.html')
     context = {
         'livros': [
@@ -579,7 +613,19 @@ urlpatterns = [
 ]
 ```
 
-Em seguida, crie um arquivo HTML com nome `livros.html` na pasta `templates` com o seguinte conteúdo:
+Em seguida, execute o projeto django:
+
+```bash
+python3 manage.py runserver
+```
+
+Por fim, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000`) e analise o resultado tanto na página principal, quanto a página livros.
+
+### Criando a Página TCCs no Django
+
+Agora, iremos criar a tela da página de TCCs do nosso sistema.
+
+Assim, crie um arquivo HTML com nome `tccs.html` na pasta `templates` com o seguinte conteúdo:
 
 ```html
 {% load static %}
@@ -588,7 +634,7 @@ Em seguida, crie um arquivo HTML com nome `livros.html` na pasta `templates` com
 <html>
     <head>
         <link rel="stylesheet" href="{% static 'mystyles.css' %}"> 
-        <title>Portal Biblioteca - Livros</title>
+        <title>Portal Biblioteca - TCCs</title>
     </head>
     <body>
         <div class="topnav">
@@ -600,10 +646,10 @@ Em seguida, crie um arquivo HTML com nome `livros.html` na pasta `templates` com
             <a href="/auth/cadastro">CADASTRE-SE</a>
         </div>
         <div class="mycard">
-            <h1>Livros</h1>
+            <h1>Trabalhos de Conclusão de Curso</h1>
             <ul>
-                {% for l in livros %}
-                <li>{{ l.nome }} | {{ l.autor }} | {{ l.ano }} </li>
+                {% for tcc in tccs %}
+                <li><em>Título:</em> {{ tcc.titulo }} <br> <em>Autor:</em> {{ tcc.autor }} </li>
                 {% endfor %}
             </ul>
         </div>
@@ -611,19 +657,7 @@ Em seguida, crie um arquivo HTML com nome `livros.html` na pasta `templates` com
 </html>
 ```
 
-Em seguida, execute o projeto django:
-
-```bash
-python3 manage.py runserver
-```
-
-Em seguida, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000`) tanto na página principal quanto a página livros.
-
-### Criando a Página TCCs no Django
-
-Agora, iremos criar a tela da página de TCCs do nosso sistema.
-
-Assim, adicione ao arquivo `views.py` na pasta `biblioteca` o seguinte método:
+Em seguida, adicione ao arquivo `views.py` na pasta `biblioteca` o seguinte método:
 
 ```python
 ...
@@ -685,7 +719,19 @@ urlpatterns = [
 ]
 ```
 
-Em seguida, crie um arquivo HTML com nome `tccs.html` na pasta `templates` com o seguinte conteúdo:
+Em seguida, execute o projeto django:
+
+```bash
+python3 manage.py runserver
+```
+
+Por fim, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000`) e analise o resultado nas páginas principal, livros e TCCs.
+
+### Adicionando Tela de Detalhes aos TCCs
+
+Agora, iremos adicionar uma tela de detalhes sobre os TCCs em nosso sistema.
+
+Assim, crie um arquivo HTML com nome `tcc_detalhes.html` na pasta `templates` com o seguinte conteúdo:
 
 ```html
 {% load static %}
@@ -694,7 +740,7 @@ Em seguida, crie um arquivo HTML com nome `tccs.html` na pasta `templates` com o
 <html>
     <head>
         <link rel="stylesheet" href="{% static 'mystyles.css' %}"> 
-        <title>Portal Biblioteca - TCCs</title>
+        <title>Portal Biblioteca - TCCs - Detalhes</title>
     </head>
     <body>
         <div class="topnav">
@@ -706,30 +752,32 @@ Em seguida, crie um arquivo HTML com nome `tccs.html` na pasta `templates` com o
             <a href="/auth/cadastro">CADASTRE-SE</a>
         </div>
         <div class="mycard">
-            <h1>Trabalhos de Conclusão de Curso</h1>
-            <ul>
-                {% for tcc in tccs %}
-                <li><em>Título:</em> {{ tcc.titulo }} <br> <em>Autor:</em> {{ tcc.autor }} </li>
-                {% endfor %}
-            </ul>
+            <h1>Trabalho de Conclusão de Curso</h1>
+            <p><em>Título:</em> {{ tcc.titulo }} </p>
+            <p><em>Autor:</em> {{ tcc.autor }}</p>
+            <p><em>Orientador:</em> {{ tcc.orientador }}</p>
+            <p><em>Ano:</em> {{ tcc.ano }}</p>
         </div>
+
+        <p><center>Volte para <a href="/tccs">TCCs</a></center></p>
+        
     </body>
 </html>
 ```
 
-Em seguida, execute o projeto django:
+Em seguida, edite o HTML com nome `tccs.html` na pasta `templates` com o seguinte conteúdo:
 
-```bash
-python3 manage.py runserver
+```html
+...
+            <ul>
+                {% for tcc in tccs %}
+                <li onclick="window.location = 'tccs/detalhes/{{ tcc.id }}'"><em>Título:</em> {{ tcc.titulo }} <br> <em>Autor:</em> {{ tcc.autor }} </li>  <!--Linha editada -->
+                {% endfor %}
+            </ul>
+...
 ```
 
-Em seguida, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000`) na página principal, livros e TCCs.
-
-### Adicionando Tela de Detalhes aos TCCs
-
-Agora, iremos adicionar uma tela de detalhes sobre os TCCs em nosso sistema.
-
-Assim, adicione ao arquivo `views.py` na pasta `biblioteca` o seguinte método:
+Em seguida, adicione ao arquivo `views.py` na pasta `biblioteca` o seguinte método:
 
 ```python
 ...
@@ -794,59 +842,13 @@ urlpatterns = [
 ]
 ```
 
-Em seguida, crie um arquivo HTML com nome `tcc_detalhes.html` na pasta `templates` com o seguinte conteúdo:
-
-```html
-{% load static %}
-
-<!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="{% static 'mystyles.css' %}"> 
-        <title>Portal Biblioteca - TCCs - Detalhes</title>
-    </head>
-    <body>
-        <div class="topnav">
-            <a href="/">PRINCIPAL</a> |
-            <a href="/livros">LIVROS</a> |
-            <a href="/tccs">TCCs</a> |
-            <a href="/dashboard">DASHBOARD</a> |
-            <a href="/auth/login">LOGIN</a> |
-            <a href="/auth/cadastro">CADASTRE-SE</a>
-        </div>
-        <div class="mycard">
-            <h1>Trabalho de Conclusão de Curso</h1>
-            <p><em>Título:</em> {{ tcc.titulo }} </p>
-            <p><em>Autor:</em> {{ tcc.autor }}</p>
-            <p><em>Orientador:</em> {{ tcc.orientador }}</p>
-            <p><em>Ano:</em> {{ tcc.ano }}</p>
-        </div>
-
-        <p><center>Volte para <a href="/tccs">TCCs</a></center></p>
-        
-    </body>
-</html>
-```
-
-Em seguida, edite o HTML com nome `tccs.html` na pasta `templates` com o seguinte conteúdo:
-
-```html
-...
-            <ul>
-                {% for tcc in tccs %}
-                <li onclick="window.location = 'tccs/detalhes/{{ tcc.id }}'"><em>Título:</em> {{ tcc.titulo }} <br> <em>Autor:</em> {{ tcc.autor }} </li>  <!--Linha editada -->
-                {% endfor %}
-            </ul>
-...
-```
-
 Em seguida, execute o projeto django:
 
 ```bash
 python3 manage.py runserver
 ```
 
-Em seguida, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000`) na página de TCCs e clique sobre um TCC para ver os detalhes.
+Por fim, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000`) e analise o resultado (na página de TCCs e clique sobre um TCC para ver os detalhes).
 
 ### Adicionando Template Mestre no Django
 
@@ -880,11 +882,11 @@ Comece criando um template chamado `base.html` dentro da pasta `template`, com o
 </html>
 ```
 
-Agora precisamos modificar os templates (páginas) anteriormente criados. Todas as páginas `principal.html`, `livros.html`, `tccs.html` e `tcc_detalhes.html` precisam ser modificadas para extender da página base/mestre nomeada de `base.html`.
+Agora, precisamos modificar os templates (páginas) anteriormente criados. Todas as páginas `principal.html`, `livros.html`, `tccs.html` e `tcc_detalhes.html` precisam ser modificadas para extender da página base/mestre nomeada de `base.html`.
 
 Isso é feito incluindo o modelo mestre com a tag `{% extends %}`  e inserindo um bloco `titulo` e um bloco `conteudo`:
 
-Primeiro, modifique a página `principal.html` para o seguinte conteúdo:
+Assim, modifique a página `principal.html` para o seguinte conteúdo:
 
 ```html
 {% extends "base.html" %}
@@ -973,34 +975,13 @@ Em seguida, execute o projeto django:
 python3 manage.py runserver
 ```
 
-Em seguida, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000`) e teste o sistema.
+Por fim, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000`) e analise o resultado.
 
 ### Incluindo Código JavaScript no Projeto
 
 Até o presente momento não temos código JavaScript no nosso projeto. A fim de ilustração iremos fazer uma pequena tela de dashboard em nosso projeto com gráficos em JavaScript.
 
-Assim, precisamos atualizar o arquivo de `views.py` nas pasta `biblioteca`. Adicione a função abaixo nesse arquivo.
-
-```python
-...
-
-def dashboard(request): # adicione essa função
-    template = loader.get_template('dashboard.html')
-    return HttpResponse(template.render())
-```
-
-Agora, precisamos atualizar o arquivo de `urls.py` na pasta `biblioteca`. No arquivo adicione a linha destacada:
-
-```python
-...
-
-urlpatterns = [
-    ...
-    path('dashboard', views.dashboard, name='dashboard'), # adicione esta linha
-]
-```
-
-Em seguida, na pasta `templates` crie um arquivo chamado `dashboard.html`. Nesse arquivo coloque o seguinte conteúdo:
+Assim, na pasta `templates` crie um arquivo chamado `dashboard.html`. Nesse arquivo, coloque o seguinte conteúdo:
 
 ```html
 {% extends "base.html" %}
@@ -1044,21 +1025,64 @@ Em seguida, na pasta `templates` crie um arquivo chamado `dashboard.html`. Nesse
 {% endblock %}
 ```
 
+Em seguida, precisamos atualizar o arquivo de `views.py` nas pasta `biblioteca`. Adicione a função abaixo nesse arquivo.
+
+```python
+...
+
+def dashboard(request):        # adicione essa função
+    template = loader.get_template('dashboard.html')
+    return HttpResponse(template.render())
+```
+
+Agora, precisamos atualizar o arquivo de `urls.py` na pasta `biblioteca`. No arquivo adicione a linha destacada:
+
+```python
+...
+
+urlpatterns = [
+    ...
+    path('dashboard', views.dashboard, name='dashboard'), # adicione esta linha
+]
+```
+
 Agora, reinicie o servidor:
 
 ```bash
 python3 manage.py runserver
 ```
 
-Agora, volte para o navegador e atualize a barra de endereço [127.0.0.1:8000/dashboard](127.0.0.1:8000/dashboard)
-
-Analise a página de dashboard construída.
+Por fim, acesse o endereço [127.0.0.1:8000/dashboard](127.0.0.1:8000/dashboard) e analise o resultado.
 
 ### Modularizando o Código JavaScript no Projeto
 
-Agora, iremos modularizar o nosso código melhor.
+Agora, iremos modularizar o código JavaScript.
 
-Assim, na pasta `staticfiles` crie um arquivo chamado `myscripts.js`. Coloque nesse arquivo o seguinte conteúdo:
+Assim, precisamos atualizar o código do `dashboard.html` da pasta `templates`. O conteúdo desse arquivo deve ficar assim:
+
+```html
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block titulo %}
+    Portal Biblioteca - Dashboard
+{% endblock %}
+
+{% block conteudo %}
+    <div class="mycard">
+        <h1>Dashboard</h1>
+        <div>
+            <canvas id="graficoNumVolumes"></canvas>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{% static 'myscripts.js' %}"></script>
+{% endblock %}
+```
+
+Em seguida, na pasta `staticfiles` crie um arquivo chamado `myscripts.js`. Coloque nesse arquivo o seguinte conteúdo:
 
 ```javascript
 function graficoBarras() {
@@ -1087,7 +1111,23 @@ function graficoBarras() {
 graficoBarras();
 ```
 
-Agora, precisamos atualizar o código do `dashboard.html` da pasta `templates`. O conteúdo desse arquivo deve ficar assim:
+Em seguida, execute o seguinte comando abaixo:
+
+```bash
+python3 manage.py collectstatic
+```
+
+Agora, reinicie o servidor:
+
+```bash
+python3 manage.py runserver
+```
+
+Agora, atualize o endereço [127.0.0.1:8000/dashboard](127.0.0.1:8000/dashboard) e analise o resultado.
+
+Nessa etapa, desejamos também colocar um gráfico de pizza no nosso dashboard.
+
+Assim, atualize o arquivo de `dashboard.html` na pasta `templates`.
 
 ```html
 {% extends "base.html" %}
@@ -1104,6 +1144,11 @@ Agora, precisamos atualizar o código do `dashboard.html` da pasta `templates`. 
         <div>
             <canvas id="graficoNumVolumes"></canvas>
         </div>
+        <br>
+        <br>
+        <div>
+            <canvas id="graficoPizza"></canvas>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -1111,23 +1156,7 @@ Agora, precisamos atualizar o código do `dashboard.html` da pasta `templates`. 
 {% endblock %}
 ```
 
-Em seguida, execute o seguinte comando abaixo:
-
-```bash
-python3 manage.py collectstatic
-```
-
-Agora reinicie o servidor:
-
-```bash
-python3 manage.py runserver
-```
-
-Agora volte para o navegador e atualize a barra de endereço [127.0.0.1:8000/dashboard](127.0.0.1:8000/dashboard)
-
-Analise a página de dashboard construída.
-
-Agora, iremos colocar um gráfico de pizza também no nosso dashboard. Assim, na pasta `staticfiles` edite o arquivo `myscripts.js` adicionando o seguinte conteúdo:
+Em seguida, na pasta `staticfiles` edite o arquivo `myscripts.js` adicionando o seguinte conteúdo:
 
 ```javascript
 ...
@@ -1159,52 +1188,21 @@ function graficoPizza(){
 graficoPizza();
 ```
 
-Agora, atualize o arquivo de `dashboard.html` na pasta `templates`.
-
-```html
-{% extends "base.html" %}
-
-{% load static %}
-
-{% block titulo %}
-    Portal Biblioteca - Dashboard
-{% endblock %}
-
-{% block conteudo %}
-    <div class="mycard">
-        <h1>Dashboard</h1>
-        <div>
-            <canvas id="graficoNumVolumes"></canvas>
-        </div>
-        <br>
-        <br>
-        <div>
-            <canvas id="graficoPizza"></canvas>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="{% static 'myscripts.js' %}"></script>
-{% endblock %}
-```
-
 Em seguida, execute o seguinte comando abaixo:
 
 ```bash
 python3 manage.py collectstatic
 ```
 
-Agora reinicie o servidor:
+Agora, reinicie o servidor:
 
 ```bash
 python3 manage.py runserver
 ```
 
-Agora volte para o navegador e atualize a barra de endereço [127.0.0.1:8000/dashboard](127.0.0.1:8000/dashboard)
+Por fim, acesse o endereço [127.0.0.1:8000/dashboard](127.0.0.1:8000/dashboard) e analise o resultado.
 
-Analise a página de dashboard construída.
-
-Para mais informações sobre gráficos em javacript consulte a documentação da biblioteca [chart.js](https://www.chartjs.org/).
+Para mais informações sobre gráficos em JavaScript, consulte a documentação da biblioteca [chart.js](https://www.chartjs.org/).
 
 ### Fim do Tutorial
 
