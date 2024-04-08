@@ -314,13 +314,17 @@ Abra o arquivo HTML e insira o seguinte:
 ```html
 <!DOCTYPE html>
 <html>
-<body>
+    <head>
+        <meta charset="utf-8">
+        <title>Portal Biblioteca</title>
+    </head>
+    <body>
 
-<h1>Olá Mundo!</h1>
+    <h1>Olá Mundo!</h1>
 
-<p>Bem-vindo ao meu primeiro projeto Django!</p>
+    <p>Bem-vindo ao meu primeiro projeto Django!</p>
 
-</body>
+    </body>
 </html>
 ```
 
@@ -377,6 +381,7 @@ Assim, edite o arquivo HTML com nome `principal.html` na pasta `templates` com o
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="{% static 'mystyles.css' %}"> 
         <title>Portal Biblioteca</title>
     </head>
@@ -513,6 +518,7 @@ Assim, crie um arquivo HTML com nome `livros.html` na pasta `templates` com o se
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="{% static 'mystyles.css' %}"> 
         <title>Portal Biblioteca - Livros</title>
     </head>
@@ -633,6 +639,7 @@ Assim, crie um arquivo HTML com nome `tccs.html` na pasta `templates` com o segu
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="{% static 'mystyles.css' %}"> 
         <title>Portal Biblioteca - TCCs</title>
     </head>
@@ -739,6 +746,7 @@ Assim, crie um arquivo HTML com nome `tcc_detalhes.html` na pasta `templates` co
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="{% static 'mystyles.css' %}"> 
         <title>Portal Biblioteca - TCCs - Detalhes</title>
     </head>
@@ -864,6 +872,7 @@ Comece criando um template chamado `base.html` dentro da pasta `template`, com o
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <link rel="stylesheet" href="{% static 'mystyles.css' %}"> 
         <title>{% block titulo %}{% endblock %}</title>
     </head>
