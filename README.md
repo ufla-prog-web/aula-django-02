@@ -23,6 +23,8 @@
 
 ## Introdução
 
+<a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
+
 Aula Djando 02. Projeto utilizando o Django para ser desenvolvido na Aula de GAC116 - Programação Web.
 
 O objetivo desse projeto é criar um sistema para gestão de biblioteca.
@@ -32,6 +34,8 @@ Este tutorial foi elaborado baseado no tutorial disponível no [curso de django 
 A aula está estruturada em forma de tutorial, de forma que cada estudante vá replicando em seu computador os conceitos e recursos aqui mostrados. A aula mostra a evolução do código/solução para que os estudantes possa compreender como as diferentes tecnologias se conectam.
 
 ## Recursos Utilizados
+
+<a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
 A seguir estão listados os principais recursos utilizados no desenvolvimento desta aula.
 
@@ -64,43 +68,127 @@ A seguir estão listados os principais recursos utilizados no desenvolvimento de
 
 ### Ferramentas
 
+* Git - Sistema de Controle de Versão - [link](https://git-scm.com/)
+* Github - Plataforma de Hospedagem de Códigos - [link](https://github.com/)
 * Visual Studio Code - IDE - [link](https://code.visualstudio.com/)
 * Pip - Gerenciador de Pacotes do Python - [link](https://pypi.org/project/pip/)
 * Venv - Ambiente Virtual do Python - [link](https://docs.python.org/pt-br/3/library/venv.html)
 * SQLite Online - SGBD - [link](https://sqliteonline.com/)
 * DB Browser for SQLite - SGBD - [link](https://sqlitebrowser.org/)
-* Git - Sistema de Controle de Versão - [link](https://git-scm.com/)
-* Github - Plataforma de Hospedagem de Códigos - [link](https://github.com/)
 
 ## Fundamentos Teóricos
 
-### Arquitetura Web
+<a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-#### Arquitetura Geral das Aplicação Web
+A seguir estão destacados alguns dos principais fundamentos teóricos para entendimento desse tutorial.
+
+### Características do Django
+
+**1. Framework completo:** Django oferece tudo o que é necessário para o desenvolvimento de uma aplicação web, incluindo roteamento de URLs, mapeamento objeto-relacional (ORM), sistema de templates, autenticação, etc.
+
+**2. Administração automática:** Com base nos modelos definidos, Django gera automaticamente uma interface administrativa poderosa e personalizável, economizando tempo no desenvolvimento de funcionalidades administrativas.
+
+**3. ORM (Object-Relational Mapping):** O Django possui um ORM que facilita a interação com bancos de dados relacionais, permitindo que os desenvolvedores escrevam consultas em Python ao invés de SQL.
+
+**4. Sistema de templates:** Django possui um sistema de templates eficiente que permite criar HTML dinâmico de forma organizada, utilizando lógica básica como laços e condicionais.
+
+**5. Segurança embutida:** O Django se preocupa com a segurança, oferecendo proteção contra ataques comuns como SQL Injection, Cross-site Scripting (XSS), Cross-site Request Forgery (CSRF), e Clickjacking.
+
+**6. Escalabilidade:** Django é altamente escalável, podendo lidar com grandes volumes de tráfego, como em sites populares que utilizam o framework (por exemplo, Instagram e Pinterest).
+
+**7. Comunidade ativa e documentação:** Django conta com uma ampla comunidade de desenvolvedores e uma documentação completa e detalhada, facilitando a resolução de problemas e o aprendizado.
+
+**8. Reutilização de código:** Django promove a reutilização de componentes por meio de pacotes chamados "apps". Cada app é modular e pode ser usado em diferentes projetos ou em diferentes partes da mesma aplicação.
+
+**9. Suporte a várias bases de dados:** O Django suporta diferentes sistemas de banco de dados, como PostgreSQL, MySQL, SQLite e Oracle, tornando-o flexível para diversos ambientes.
+
+**10. Testes integrados:** O Django tem suporte nativo para testes automatizados, permitindo que desenvolvedores escrevam e executem testes facilmente para garantir a qualidade do código.
+
+### Arquitetura Web de Três Camadas
+
+A arquitetura web de três camadas é um padrão de design de software que organiza uma aplicação em três níveis distintos, cada um com responsabilidades bem definidas. Essas camadas são:
+
+**1. Camada de Apresentação (Frontend)**:
+
+* Também chamada de interface de usuário, essa camada é responsável pela interação com o usuário. Ela inclui tudo o que o usuário vê e utiliza para interagir com o sistema, como páginas web, formulários, botões, e elementos visuais em geral.
+* Aqui, são usados tecnologias como HTML, CSS, JavaScript e frameworks frontend (React, Angular, etc.).
+* A camada de apresentação envia as entradas dos usuários para a camada de negócios e exibe os resultados de volta para o usuário.
+
+**2. Camada de Negócios (Lógica da Aplicação - Backend)**:
+
+* Nessa camada está a lógica de negócios da aplicação, ou seja, as regras que governam como os dados devem ser processados e as operações que devem ser realizadas. Ela trata os pedidos recebidos da camada de apresentação e executa as operações necessárias.
+* Essa camada pode incluir validações, cálculos e chamadas ao banco de dados. Em termos de tecnologia, é geralmente desenvolvida com linguagens de programação como Python, Java, PHP, ou frameworks como Django, Spring Boot, Laravel, etc.
+
+**3. Camada de Dados (Banco de Dados - Backend)**:
+
+* A camada de dados gerencia o armazenamento e recuperação de dados em um banco de dados. Ela é responsável pela persistência dos dados e operações como criar, ler, atualizar e deletar (CRUD).
+* Geralmente, são usados sistemas de gerenciamento de banco de dados relacionais (como MySQL, PostgreSQL) ou não relacionais (como MongoDB).
+* A camada de negócios interage com essa camada para armazenar e buscar dados conforme necessário.
+
+**Fluxo da Arquitetura de Três Camadas**:
+
+* O usuário interage com a Camada de Apresentação.
+* A Camada de Apresentação faz requisições para a Camada de Negócios.
+* A Camada de Negócios processa a lógica e, se necessário, interage com a Camada de Dados.
+* A Camada de Dados responde com os dados necessários para a Camada de Negócios.
+* A Camada de Negócios retorna os resultados processados para a Camada de Apresentação.
+* A Camada de Apresentação exibe os resultados para o usuário.
+
+Essa separação facilita a manutenção e escalabilidade da aplicação, permitindo que cada camada possa ser modificada ou melhorada de forma independente.
 
 ![Arquitetura das Aplicações Web](./docs/arquitetura-web.png)
 
-### Arquitetura de um Projeto Django
+### Arquitetura MVT do Django
 
-#### Arquitetura MVT - Geral
+O modelo MVT (Model-View-Template) é uma arquitetura usada no framework Django para desenvolvimento de aplicações web. Ele organiza a aplicação em três componentes principais:
+
+* **Model (Modelo)**: Responsável pela definição da estrutura dos dados e a interação com o banco de dados. Ele define as classes que representam as tabelas e seus relacionamentos, além de métodos para realizar consultas e operações nos dados.
+
+* **View (Visão)**: Contém a lógica da aplicação. A view recebe as requisições dos usuários, processa os dados (geralmente acessando o Model), e retorna uma resposta, como uma página HTML renderizada ou dados em formato JSON.
+
+* **Template (Apresentação)**: É a camada de apresentação, onde o conteúdo dinâmico gerado pela View é inserido em arquivos HTML. Os templates permitem a separação da lógica de negócio da interface de usuário, tornando o código mais organizado.
+
+Diferente do padrão MVC, onde o controller gerencia a lógica de controle, no Django, a função das views cumpre esse papel, enquanto os templates gerenciam a apresentação.
+
+A figura abaixo detalha os componentes descritos acima.
 
 ![Arquitetura MVT - Geral](./docs/mvt-1.png)
 
-#### Arquitetura MVT - Requisição
+No modelo MVT do Django, as requisições seguem um fluxo bem definido, onde cada componente (Model, View, Template) desempenha um papel específico no processamento e resposta de uma requisição HTTP. O fluxo funciona da seguinte forma:
+
+* **Recebimento da Requisição (HTTP Request)**: Quando um usuário acessa uma URL no navegador, o Django recebe a requisição HTTP correspondente. Esse processo começa no URL *dispatcher* (mapeador de URLs), que verifica qual view deve ser chamada com base na URL requisitada.
+
+* **View (Visão)**: A View é o ponto de entrada para o processamento da requisição. A função ou classe associada à URL recebida é executada. Ela é responsável por: Receber a requisição do usuário; Executar a lógica necessária, que pode incluir validações, processamento de dados, ou interações com o banco de dados através dos Models; e Retornar uma resposta apropriada.
+
+* **Model (Modelo)**: Se a View precisar acessar ou manipular dados, ela fará isso por meio do Model. O Model contém a lógica de negócios relacionada à persistência de dados, permitindo a View realizar operações como criar, ler, atualizar ou deletar registros no banco de dados.
+
+* **Template (Apresentação)**: Após processar os dados, a View geralmente prepara um contexto (um dicionário de dados) e passa esse contexto para o Template. O Template é um arquivo HTML com marcações especiais do Django que permitem a inserção de dados dinâmicos. O Template renderiza esses dados em uma estrutura HTML, exibindo o conteúdo adequado com base nas informações passadas pela View.
+
+* **Resposta (HTTP Response)**: Depois que o Template é renderizado, a View retorna uma resposta HTTP (normalmente uma página HTML ou dados JSON em APIs) ao navegador ou cliente. Essa resposta contém o conteúdo processado e visualizado pelo usuário.
+
+A figura abaixo detalha o fluxo descrito acima.
 
 ![Arquitetura MVT - Requisição](./docs/mvt-2.png)
 
-#### Arquitetura MVT - Detalhes da Requisição
+A figura abaixo detalha ainda mais a arquitetura MVT e as tecnologias envolvidas.
 
 ![Arquitetura MVT - Detalhes](./docs/mvt-3.png)
 
+### Modelo ORM
+
+O Django suporta o conceito de Mapeamento Objeto-Relacional (ORM). Através do ORM você define a modelagem de dados através de classes em Python. Com isso é possível gerar suas tabelas no banco de dados e manipulá-las sem necessidade de utilizar SQL (o que também é possível). Os registros de cada tabela são representados como instâncias das classes correspondentes.
+
 ## Objetivo da Aula
+
+<a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
 A animação abaixo mostra de forma visual o resultado esperado nesta aula.
 
 ![Sistema Objetivo da Aula](./docs/objetivo.gif)
 
 ## Desenvolvimento do Projeto
+
+<a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
 Os passos a seguir devem ser seguidos para alcançar o objetivo da aula.
 
@@ -201,6 +289,8 @@ deactivate
 
 ### Fluxo de Trabalho no Django
 
+A seguir é apresentado um fluxo de trabalho que pode ser seguido durante o desenvolvimento de um projeto utilizando o Django.
+
 [![](https://mermaid.ink/img/pako:eNqN1E1y2yAUB_CrMHThTVLvveiMbcnfX9Nm0UTKgkrPDikCFZBTNxPfJaseoNMT-GJ9Qq5DNSyqlfjzAwF6wzPNVA60R7dCPWUPTFtyE6WS4NNPUjqVxjLBTj9Pv8GQFWRgzOlVc2ZSek-urz-QAaohBppstHoEq4hUJHpkcqeQNDMNnBxeZL8sA2roVJR0U9q3FRP8B9KOAWu53Jn35aGT0jQ948jhuIUL3Is40-5Zxk6Oaum-3n3zN1CUglkwb3rk9Dik-_pbxffKkNjY06vlmfLGjd24SWs9ew5PreVMHJyGPtCpdHvxU6dnrWlZXnDZOpCZk_P_O725w4sax98hq2xtMyUEZBZ_OO7N1wunl__qgn2Fgu80YiWNz5eOr1rcUfDdyrl14jNdSQN6D7pzKYu1YxtkfYnbMsg-gqmEZbmrtRXbww7ftRvRjNk0Bec3Ir8R-42R3xj7jYnfmNaTN8HnZP1F8x2zp1-aq3tyPB7JbdJdlxmeBRN_f95t3XGHecaM63Bbb_qMPQhAseVC9N6NooEfx-F4FI7H4XgSjqft2O-8u3RGfhyF41k4nofjRThehuOVH9MrWoAuGM_xonquWUrtAxSQ0h6-5rBlWA9YWvIFKaus-nSQGe1ZXcEVrcocKy_iDCuwoL0tEwZTyLlVetlcfu4OfPkDBV6NXw?type=png)](https://mermaid.live/edit#pako:eNqN1E1y2yAUB_CrMHThTVLvveiMbcnfX9Nm0UTKgkrPDikCFZBTNxPfJaseoNMT-GJ9Qq5DNSyqlfjzAwF6wzPNVA60R7dCPWUPTFtyE6WS4NNPUjqVxjLBTj9Pv8GQFWRgzOlVc2ZSek-urz-QAaohBppstHoEq4hUJHpkcqeQNDMNnBxeZL8sA2roVJR0U9q3FRP8B9KOAWu53Jn35aGT0jQ948jhuIUL3Is40-5Zxk6Oaum-3n3zN1CUglkwb3rk9Dik-_pbxffKkNjY06vlmfLGjd24SWs9ew5PreVMHJyGPtCpdHvxU6dnrWlZXnDZOpCZk_P_O725w4sax98hq2xtMyUEZBZ_OO7N1wunl__qgn2Fgu80YiWNz5eOr1rcUfDdyrl14jNdSQN6D7pzKYu1YxtkfYnbMsg-gqmEZbmrtRXbww7ftRvRjNk0Bec3Ir8R-42R3xj7jYnfmNaTN8HnZP1F8x2zp1-aq3tyPB7JbdJdlxmeBRN_f95t3XGHecaM63Bbb_qMPQhAseVC9N6NooEfx-F4FI7H4XgSjqft2O-8u3RGfhyF41k4nofjRThehuOVH9MrWoAuGM_xonquWUrtAxSQ0h6-5rBlWA9YWvIFKaus-nSQGe1ZXcEVrcocKy_iDCuwoL0tEwZTyLlVetlcfu4OfPkDBV6NXw)
 
 ### Instalando o Django
@@ -255,20 +345,22 @@ python3 manage.py runserver
 
 **Explicação:** O comando acima é usado no Django para iniciar um servidor de desenvolvimento local. Ele é uma parte fundamental do processo de desenvolvimento web com o Django, pois permite que você execute e teste sua aplicação web em um ambiente de desenvolvimento local antes de implantá-la em um servidor web de produção. Ele inicia um servidor HTTP embutido no Django que pode lidar com solicitações HTTP. Por padrão, o servidor de desenvolvimento escuta na porta 8000, mas você pode especificar uma porta diferente como argumento opcional, por exemplo, `python3 manage.py runserver 8081`.
 
-Acesse através do navegdor web a página [http://127.0.0.1:8000/](http://127.0.0.1:8000/). Uma página padrão do django deve aparecer.
+Acesse através do navegdor web a página [http://127.0.0.1:8000/](http://127.0.0.1:8000/). Uma página padrão do django deve aparecer (semelhante a mostrada abaixo).
+
+![Tela Padrão Django](./docs/tela-django-inicial.png)
 
 ### Criando um Aplicativo
 
 Execute o comando abaixo para criar um aplicativo chamado `biblioteca` dentro do projeto `portal_biblioteca`:
 
 ```bash
-python3 manage.py startapp biblioteca
+django-admin startapp biblioteca
 ```
 
-ou
+O comando abaixo faz a mesma coisa:
 
 ```bash
-django-admin startapp biblioteca
+python3 manage.py startapp biblioteca
 ```
 
 **Explicação:** O comando acima é usado para criar uma nova aplicação dentro de um projeto Django. Após executar esse comando, você terá uma nova pasta chamada `biblioteca` dentro do seu projeto Django, contendo uma estrutura inicial de arquivos Python que você pode começar a editar para construir a lógica da sua aplicação. Uma aplicação (ou app) é um componente reutilizável e modular que realiza uma função específica dentro de um projeto Django. Um projeto Django pode conter várias aplicações, cada uma projetada para lidar com uma parte específica da funcionalidade do site. Cada aplicação é composta por:
@@ -282,6 +374,62 @@ django-admin startapp biblioteca
 * **Arquivos Estáticos (opcional):** Como CSS, JavaScript e imagens, que são usados para estilizar e adicionar interatividade às páginas da web.
 
 * **URLs:** Mapeiam as URLs do site para as views correspondentes. Cada aplicação geralmente tem seu próprio arquivo urls.py para definir os padrões de URL específicos dessa aplicação.
+
+### Entendendo a Estrutura de Diretórios do Django
+
+A estrutura de diretórios de um projeto Django é organizada de maneira a separar os diferentes componentes da aplicação, facilitando o desenvolvimento e a manutenção. A seguir, temos a estrutura geral de diretórios de um projeto feito em Django. 
+
+```text
+myproject/
+│
+├── manage.py
+├── myproject/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── app1/
+│   ├── migrations/
+│   ├── templates/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   └── tests.py
+├── app2/
+│   ├── migrations/
+│   ├── templates/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   └── tests.py
+└── static/
+```
+
+* **manage.py**: Um script que permite interagir com o projeto Django a partir da linha de comando. Ele é usado para executar comandos como iniciar o servidor, migrar o banco de dados e criar superusuários.
+* **myproject/**: Esta pasta contém os arquivos de configuração e o núcleo do projeto Django. Normalmente, o nome da pasta do projeto coincide com o nome do projeto. Aqui estão os arquivos comuns:
+  * **__init__.py**: Indica ao Python que essa pasta deve ser tratada como um pacote.
+  * **asgi.py**: Ponto de entrada para servidores ASGI (usado para rodar a aplicação em modo assíncrono).
+  * **settings.py**: Arquivo de configuração onde você define parâmetros como a conexão com o banco de dados, apps instalados, middleware, etc.
+  * **urls.py**: Arquivo que define os mapeamentos de URL do projeto para as views.
+  * **wsgi.py**: Ponto de entrada para servidores WSGI (usado para rodar a aplicação em modo síncrono).
+* **app/**: O Django incentiva o uso de uma abordagem modular, onde a funcionalidade de uma aplicação é dividida em "apps" individuais. Cada app tem sua própria pasta dentro do projeto e contém a lógica de uma parte específica do sistema.
+  * **migrations/**: Contém arquivos de migração que Django usa para gerenciar o banco de dados. Cada migração reflete uma mudança no modelo de dados.
+  * **templates/**: Essa pasta contém os arquivos HTML que serão renderizados pelas views. Cada app pode ter sua própria pasta `templates/` ou você pode criar uma pasta `templates/` global na raiz do projeto.
+  * **__init__.py**: Marca a pasta como um pacote Python.
+  * **admin.py**: Define como os modelos do app serão exibidos na interface administrativa do Django.
+  * **apps.py**: Define a configuração do app.
+  * **models.py**: Contém a definição dos modelos (classes) que representam as tabelas do banco de dados.
+  * **views.py**: Contém as funções ou classes que processam as requisições e retornam as respostas.
+  * **urls.py**: Define as rotas específicas para as views deste app.
+  * **tests.py**: Contém testes automatizados para a aplicação.
+  * **static/**: Essa pasta contém arquivos estáticos, como CSS, JavaScript e imagens. Os arquivos dentro de `static/` são usados para a apresentação visual da aplicação.
 
 ### Criando a Primeira View no Django
 
@@ -769,7 +917,7 @@ Assim, crie um arquivo HTML com nome `tcc_detalhes.html` na pasta `templates` co
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="{% static 'mystyles.css' %}"> 
-        <title>Portal Biblioteca - TCCs - Detalhes</title>
+        <title>Portal Biblioteca - TCC - Detalhes</title>
     </head>
     <body>
         <div class="topnav">
@@ -867,7 +1015,7 @@ urlpatterns = [
     path('', views.principal, name='principal'),
     path('livros', views.livros, name='livros'),
     path('tccs', views.tccs, name='tccs'),
-    path('tccs/detalhes/<int:id>', views.tcc_detalhes, name='tcc_detalhes'), # linha adicionado
+    path('tccs/detalhes/<int:id>', views.tcc_detalhes, name='tcc_detalhes'), # linha adicionada
 ]
 ```
 
@@ -983,7 +1131,7 @@ Em seguida, modifique a página `tcc_detalhes.html` para o seguinte conteúdo:
 {% extends "base.html" %}
 
 {% block titulo %}
-    Portal Biblioteca - TCCs - Detalhes
+    Portal Biblioteca - TCC- Detalhes
 {% endblock %}
 
 {% block conteudo %}
@@ -1235,6 +1383,8 @@ Por fim, acesse o endereço [127.0.0.1:8000/dashboard](127.0.0.1:8000/dashboard)
 Para mais informações sobre gráficos em JavaScript, consulte a documentação da biblioteca [chart.js](https://www.chartjs.org/).
 
 ## Créditos e Referências
+
+<a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
 Este tutorial foi inspirado nos seguintes recursos:
 
