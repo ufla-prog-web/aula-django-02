@@ -641,7 +641,7 @@ a:link, a:visited {
 }
 ```
 
-Em seguida, copie o arquivo chamado `logo-portal.png` (baixado do github) para a pasta `staticfiles`.
+Em seguida, copie o arquivo chamado `logo-portal.png` (baixado do github na pasta `docs`) para a pasta `staticfiles`.
 
 Em seguida, no final do arquivo `settings.py` na pasta `portal_biblioteca` adicione o seguinte conteúdo:
 
