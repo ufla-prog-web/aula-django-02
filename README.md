@@ -25,7 +25,7 @@
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-Aula Djando 02. Projeto utilizando o Django para ser desenvolvido na Aula de GAC116 - Programação Web.
+Aula Django 02. Projeto utilizando o Django para ser desenvolvido na Aula de GAC116 - Programação Web.
 
 O objetivo desse projeto é criar um sistema para gestão de biblioteca.
 
@@ -1131,7 +1131,7 @@ Em seguida, modifique a página `tcc_detalhes.html` para o seguinte conteúdo:
 {% extends "base.html" %}
 
 {% block titulo %}
-    Portal Biblioteca - TCC- Detalhes
+    Portal Biblioteca - TCC - Detalhes
 {% endblock %}
 
 {% block conteudo %}
