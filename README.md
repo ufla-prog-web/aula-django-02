@@ -2,13 +2,13 @@
 
 <p align="center">
   <a href="#">
-    <img src="https://img.shields.io/badge/Aula-Python-brightgreen.svg" alt="Aula Python">
+    <img src="https://img.shields.io/badge/Aula-Portal_Biblioteca-brightgreen.svg" alt="Aula Portal Biblioteca">
   </a>
   <a href="#">
     <img src="https://img.shields.io/badge/Aula-Django-blue.svg" alt="Aula Django">
   </a>
   <a href="#">
-    <img src="https://img.shields.io/badge/Aula-Portal_Biblioteca-orange.svg" alt="Aula Portal Biblioteca">
+    <img src="https://img.shields.io/badge/Aula-Backend-orange.svg" alt="Aula Backend">
   </a>
 </p>
 
@@ -25,54 +25,52 @@
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-Aula Django 02. Projeto utilizando o Django para ser desenvolvido na Aula de GAC116 - Programação Web.
+O objetivo deste tutorial é criar um sistema para gestão de biblioteca usando o framework Python Django. Esse projeto será utilizado na disciplina GAC116 - Programação Web da Universidade Federal de Lavras (UFLA).
 
-O objetivo desse projeto é criar um sistema para gestão de biblioteca.
+Este tutorial foi elaborado com base no tutorial disponível no [curso de Django da W3Schools](https://www.w3schools.com/django/index.php) e na [documentação oficial do Django](https://docs.djangoproject.com/pt-br/5.0/).
 
-Este tutorial foi elaborado baseado no tutorial disponível no [curso de django da w3schools](https://www.w3schools.com/django/index.php) e também baseado na [documentação oficial do django](https://docs.djangoproject.com/pt-br/5.0/).
-
-A aula está estruturada em forma de tutorial, de forma que cada estudante vá replicando em seu computador os conceitos e recursos aqui mostrados. A aula mostra a evolução do código/solução para que os estudantes possa compreender como as diferentes tecnologias se conectam.
+A aula está organizada no formato de tutorial, permitindo que cada estudante replique em seu computador os conceitos e recursos apresentados. O código será desenvolvido gradualmente, de modo a evidenciar a evolução da solução e facilitar a compreensão de como as tecnologias Django, HTML, CSS e JavaScript se integram na construção de aplicações web.
 
 ## Recursos Utilizados
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-A seguir estão listados os principais recursos utilizados no desenvolvimento desta aula.
+A seguir estão listados os principais recursos empregados no desenvolvimento desta aula.
 
 ### Linguagens
 
-* Python - Linguagem de Programação Principal
-    * [link do site python](https://www.python.org/)
-    * [link do curso da w3schools](https://www.w3schools.com/python/default.asp)
-* HTML - Estrutura da Página Web
-    * [link do curso da w3schools](https://www.w3schools.com/html/default.asp)
-* CSS - Apresentação da Página Web
-    * [link do curso da w3schools](https://www.w3schools.com/css/default.asp)
-* JavaScript - Comportamento da Página Web
-    * [link do curso da w3schools](https://www.w3schools.com/js/default.asp)
-* SQL - Linguagem para Consultas no Banco de Dados
-  * [link do curso da w3schools](https://www.w3schools.com/sql/default.asp)
+* Python - Linguagem de programação principal
+  * [Link do site Python](https://www.python.org/)
+  * [Link do curso da W3Schools](https://www.w3schools.com/python/default.asp)
+* HTML - Responsável pela estrutura da página web
+  * [Link do curso da W3Schools](https://www.w3schools.com/html/default.asp)
+* CSS - Responsável pela apresentação da página web
+  * [Link do curso da W3Schools](https://www.w3schools.com/css/default.asp)
+* JavaScript - Responsável pelo comportamento da página web
+  * [Link do curso da W3Schools](https://www.w3schools.com/js/default.asp)
+* SQL - Linguagem para consultas no banco de dados
+  * [Link do curso da W3Schools](https://www.w3schools.com/sql/default.asp)
 
 ### Frameworks
 
-* Django - Framework Web
-    * [link do site do django](https://www.djangoproject.com/)
-    * [link do curso da w3schools](https://www.w3schools.com/django/index.php)
+* Django - Framework web
+  * [Link do site do Django](https://www.djangoproject.com/)
+  * [Link do curso da w3schools](https://www.w3schools.com/django/index.php)
 
 ### Bibliotecas
 
-* Jinja - Biblioteca Python para Templates
-    * [link do site do jinja](https://jinja.palletsprojects.com/en/3.1.x/)
-* Chart.js - Biblioteca JavaScript para Gráficos
-    * [link do site do chart.js](https://www.chartjs.org/)
+* Jinja - Biblioteca Python para templates
+    * [Link do site do Jinja](https://jinja.palletsprojects.com/en/3.1.x/)
+* Chart.js - Biblioteca JavaScript para gráficos
+    * [Link do site do chart.js](https://www.chartjs.org/)
 
 ### Ferramentas
 
-* Git - Sistema de Controle de Versão - [link](https://git-scm.com/)
-* Github - Plataforma de Hospedagem de Códigos - [link](https://github.com/)
-* Visual Studio Code - IDE - [link](https://code.visualstudio.com/)
-* Pip - Gerenciador de Pacotes do Python - [link](https://pypi.org/project/pip/)
-* Venv - Ambiente Virtual do Python - [link](https://docs.python.org/pt-br/3/library/venv.html)
+* Visual Studio Code - Ambiente de desenvolvimento integrado - [link](https://code.visualstudio.com/)
+* Git - Sistema de controle de versão - [link](https://git-scm.com/)
+* Github - Plataforma de hospedagem e colaboração em projetos de software - [link](https://github.com/)
+* Pip - Gerenciador de pacotes do Python - [link](https://pypi.org/project/pip/)
+* Venv - Ambiente virtual do Python - [link](https://docs.python.org/pt-br/3/library/venv.html)
 * SQLite Online - SGBD - [link](https://sqliteonline.com/)
 * DB Browser for SQLite - SGBD - [link](https://sqlitebrowser.org/)
 
@@ -80,19 +78,19 @@ A seguir estão listados os principais recursos utilizados no desenvolvimento de
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-A seguir estão destacados alguns dos principais fundamentos teóricos para entendimento desse tutorial.
+A seguir estão destacados alguns dos principais fundamentos teóricos para entendimento deste tutorial.
 
 ### Características do Django
 
-**1. Framework completo:** Django oferece tudo o que é necessário para o desenvolvimento de uma aplicação web, incluindo roteamento de URLs, mapeamento objeto-relacional (ORM), sistema de templates, autenticação, etc.
+**1. Framework completo:** Django oferece tudo o que é necessário para o desenvolvimento de uma aplicação web, incluindo roteamento de URLs, Mapeamento Objeto-Relacional (ORM), sistema de templates, autenticação, etc.
 
 **2. Administração automática:** Com base nos modelos definidos, Django gera automaticamente uma interface administrativa poderosa e personalizável, economizando tempo no desenvolvimento de funcionalidades administrativas.
 
-**3. ORM (Object-Relational Mapping):** O Django possui um ORM que facilita a interação com bancos de dados relacionais, permitindo que os desenvolvedores escrevam consultas em Python ao invés de SQL.
+**3. ORM (*Object-Relational Mapping*):** O Django possui um ORM que facilita a interação com bancos de dados relacionais, permitindo que os desenvolvedores escrevam consultas em Python ao invés de SQL.
 
 **4. Sistema de templates:** Django possui um sistema de templates eficiente que permite criar HTML dinâmico de forma organizada, utilizando lógica básica como laços e condicionais.
 
-**5. Segurança embutida:** O Django se preocupa com a segurança, oferecendo proteção contra ataques comuns como SQL Injection, Cross-site Scripting (XSS), Cross-site Request Forgery (CSRF), e Clickjacking.
+**5. Segurança embutida:** O Django se preocupa com a segurança, oferecendo proteção contra ataques comuns como SQL *Injection*, *Cross-site Scripting* (XSS), *Cross-site Request Forgery* (CSRF), e *Clickjacking*.
 
 **6. Escalabilidade:** Django é altamente escalável, podendo lidar com grandes volumes de tráfego, como em sites populares que utilizam o framework (por exemplo, Instagram e Pinterest).
 
@@ -140,7 +138,7 @@ Essa separação facilita a manutenção e escalabilidade da aplicação, permit
 
 ### Arquitetura MVT do Django
 
-O modelo MVT (Model-View-Template) é uma arquitetura usada no framework Django para desenvolvimento de aplicações web. Ele organiza a aplicação em três componentes principais:
+O modelo MVT (*Model-View-Template*) é uma arquitetura usada no framework Django para desenvolvimento de aplicações web. Ele organiza a aplicação em três componentes principais:
 
 * **Model (Modelo)**: Responsável pela definição da estrutura dos dados e a interação com o banco de dados. Ele define as classes que representam as tabelas e seus relacionamentos, além de métodos para realizar consultas e operações nos dados.
 
@@ -182,6 +180,8 @@ O Django suporta o conceito de Mapeamento Objeto-Relacional (ORM). Através do O
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
+O objetivo desta aula é iniciar a construção de um projeto de um portal de biblioteca usando o framework Python Django. Aprenderemos a configurar o Django, a criar views e templates, a incluir código CSS e JavaScript ao projeto, além de trabalhar com template mestre para evitar repetição de código HTML.
+
 A animação abaixo mostra de forma visual o resultado esperado nesta aula.
 
 ![Sistema Objetivo da Aula](./docs/objetivo.gif)
@@ -190,98 +190,57 @@ A animação abaixo mostra de forma visual o resultado esperado nesta aula.
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-Os passos a seguir devem ser seguidos para alcançar o objetivo da aula.
+Siga os passos abaixo para alcançar o objetivo da aula.
 
-### Clonando o Repositório
+### Clonar o Repositório
 
-Inicialmente, clone o repositório da seguinte forma:
+Para iniciar, faça o clone do repositório com o seguinte comando:
 
 ```bash
 git clone https://github.com/ufla-prog-web/aula-django-02.git
 ```
 
-### Baixando o Repositório
+### Baixar o Repositório
 
-Caso deseje ao invês de clonar o repositório (método acima), baixe o repositório do [link](https://github.com/ufla-prog-web/aula-django-02) clicando em `Code` e `Download ZIP`.
+Como alternativa ao clone, você pode baixar diretamente o repositório acessando este [link](https://github.com/ufla-prog-web/aula-django-02). Clique em `Code` e, em seguida, em `Download ZIP`.
 
-### Instalando o Python
+### Abrir o Visual Studio Code
 
-Se necessário, instale o Python (testado na versão 3.10.12) [link](https://www.python.org/downloads/).
+Abra o Visual Studio Code (VS Code) na pasta `aula-django-02`.
 
-Verifique a versão instalada do Python (para ter certeza que tudo ocorreu bem):
+**Dica:** abra o arquivo `README.md` e selecione a opção `Open Preview to the Side` para visualizar o tutorial lado a lado enquanto desenvolve a aplicação.
 
-```bash
-python3 --version
-```
+**Dica:** abra um terminal utilizando a IDE clicando em `Terminal` e `New Terminal`.
 
-### Instalando o Pip
+### Criar a Pasta do Projeto
 
-Se necessário, instale o pip (testado na versão 23.2.1):
-
-```bash
-sudo apt install python3-pip
-```
-
-Verifique a versão instalada do pip (para ter certeza que tudo ocorreu bem):
-
-```bash
-pip3 --version
-```
-
-### Abrindo o Visual Studio Code
-
-Abra a IDE Visual Studio Code na pasta `aula-django-02`.
-
-**Dica:** Abra o arquivo `README.md` e clique em `Open Preview to the Side` para facilitar a construção da aplicação.
-
-**Dica:** Abra um terminal utilizando a IDE clicando em `Terminal` e `New Terminal`.
-
-### Criando a Pasta do Projeto
-
-Em seguida, crie a pasta do projeto (`portal_biblioteca`) dentro da pasta baixada do github (`aula-django-02`):
+Em seguida, crie, dentro da pasta `aula-django-02`, a pasta do projeto denominada `code`:
 
 ```bash
 cd aula-django-02/
-mkdir portal_biblioteca
-cd portal_biblioteca/
+mkdir code
+cd code/
 ```
 
-### Criando o Ambiente Virtual
+### Criar o Ambiente Virtual
 
-Crie o ambiente virtual (venv) para isolar as instalações/dependências do Python:
-
-Unix/macOS
+Crie um ambiente virtual para isolar as dependências do projeto:
 
 ```bash
 python3 -m venv venv
 ```
 
-Windows
+**Observação:** no exemplo acima, o segundo nome `venv` é o nome que escolhemos para o nosso ambiente virtual (isso pode ser alterado).
 
-```bash
-py -m venv venv
-```
+### Ativar o Ambiente Virtual
 
-**OBS:** no comando acima, o segundo nome `venv` é o nome que escolhemos para o nosso ambiente virtual (isso pode ser alterado).
-
-### Ativando o Ambiente Virtual
-
-Ative o ambiente virtual (venv) no seu computador utilizando o comando abaixo:
-
-**Sistema Operacional:** Unix/Mac OS:
+Ative o ambiente virtual no seu computador utilizando o comando:
 
 ```bash
 source venv/bin/activate
 ```
 
-**Sistema Operacional:** Windows
-
-```bash
-Set-ExecutionPolicy Unrestricted -Scope Process
-venv\Scripts\activate.bat
-```
-
-Quando desejar sair do ambiente virtual, basta digitar:
+Para sair do ambiente virtual:
 
 ```bash
 deactivate
@@ -289,25 +248,19 @@ deactivate
 
 ### Fluxo de Trabalho no Django
 
-A seguir é apresentado um fluxo de trabalho que pode ser seguido durante o desenvolvimento de um projeto utilizando o Django.
+A seguir, descreve-se um fluxo de trabalho que pode ser adotado durante o desenvolvimento de projetos com o framework Django.
 
 [![](https://mermaid.ink/img/pako:eNqN1E1y2yAUB_CrMHThTVLvveiMbcnfX9Nm0UTKgkrPDikCFZBTNxPfJaseoNMT-GJ9Qq5DNSyqlfjzAwF6wzPNVA60R7dCPWUPTFtyE6WS4NNPUjqVxjLBTj9Pv8GQFWRgzOlVc2ZSek-urz-QAaohBppstHoEq4hUJHpkcqeQNDMNnBxeZL8sA2roVJR0U9q3FRP8B9KOAWu53Jn35aGT0jQ948jhuIUL3Is40-5Zxk6Oaum-3n3zN1CUglkwb3rk9Dik-_pbxffKkNjY06vlmfLGjd24SWs9ew5PreVMHJyGPtCpdHvxU6dnrWlZXnDZOpCZk_P_O725w4sax98hq2xtMyUEZBZ_OO7N1wunl__qgn2Fgu80YiWNz5eOr1rcUfDdyrl14jNdSQN6D7pzKYu1YxtkfYnbMsg-gqmEZbmrtRXbww7ftRvRjNk0Bec3Ir8R-42R3xj7jYnfmNaTN8HnZP1F8x2zp1-aq3tyPB7JbdJdlxmeBRN_f95t3XGHecaM63Bbb_qMPQhAseVC9N6NooEfx-F4FI7H4XgSjqft2O-8u3RGfhyF41k4nofjRThehuOVH9MrWoAuGM_xonquWUrtAxSQ0h6-5rBlWA9YWvIFKaus-nSQGe1ZXcEVrcocKy_iDCuwoL0tEwZTyLlVetlcfu4OfPkDBV6NXw?type=png)](https://mermaid.live/edit#pako:eNqN1E1y2yAUB_CrMHThTVLvveiMbcnfX9Nm0UTKgkrPDikCFZBTNxPfJaseoNMT-GJ9Qq5DNSyqlfjzAwF6wzPNVA60R7dCPWUPTFtyE6WS4NNPUjqVxjLBTj9Pv8GQFWRgzOlVc2ZSek-urz-QAaohBppstHoEq4hUJHpkcqeQNDMNnBxeZL8sA2roVJR0U9q3FRP8B9KOAWu53Jn35aGT0jQ948jhuIUL3Is40-5Zxk6Oaum-3n3zN1CUglkwb3rk9Dik-_pbxffKkNjY06vlmfLGjd24SWs9ew5PreVMHJyGPtCpdHvxU6dnrWlZXnDZOpCZk_P_O725w4sax98hq2xtMyUEZBZ_OO7N1wunl__qgn2Fgu80YiWNz5eOr1rcUfDdyrl14jNdSQN6D7pzKYu1YxtkfYnbMsg-gqmEZbmrtRXbww7ftRvRjNk0Bec3Ir8R-42R3xj7jYnfmNaTN8HnZP1F8x2zp1-aq3tyPB7JbdJdlxmeBRN_f95t3XGHecaM63Bbb_qMPQhAseVC9N6NooEfx-F4FI7H4XgSjqft2O-8u3RGfhyF41k4nofjRThehuOVH9MrWoAuGM_xonquWUrtAxSQ0h6-5rBlWA9YWvIFKaus-nSQGe1ZXcEVrcocKy_iDCuwoL0tEwZTyLlVetlcfu4OfPkDBV6NXw)
 
-### Instalando o Django
+### Instalar o Django
 
-Instale o django dentro do ambiente virtual criado (testado na versão 5.0.3):
-
-```bash
-pip3 install django
-```
-
-ou
+Instale o Django dentro do ambiente virtual criado (testado na versão 5.0):
 
 ```bash
-python -m pip install Django
+python3 -m pip install django
 ```
 
-Verifique a versão instalada do django (para ter certeza que tudo ocorreu bem):
+Verifique a versão instalada:
 
 ```bash
 django-admin --version
@@ -319,39 +272,39 @@ ou
 python3 -m django --version
 ```
 
-**OBS:** Caso o terminal não encontre o django-admin, execute o seguinte comando (utilizado geralmente quando não se utiliza o venv no laboratório DCC07):
+**Observação:** caso o terminal não encontre o django-admin, execute o seguinte comando (utilizado geralmente quando não se utiliza o venv):
 
 ```bash
 export PATH=$PATH:~/.local/bin
 ```
 
-### Criando o Projeto no Django
+### Criar o Projeto no Django
 
-Crie um projeto em django utilizando o comando abaixo:
+Crie um projeto em Django utilizando o comando abaixo:
 
 ```bash
 django-admin startproject portal_biblioteca .
 ```
 
-**OBS:** O ponto no comando acima informa ao Django para não criar uma pasta com nome `portal_biblioteca` dentro de uma pasta `portal_biblioteca`. Isso evita ter que ficar navegando entre pastas.
+**Observação:** o ponto no comando acima informa ao Django para não criar uma pasta com nome `portal_biblioteca` dentro de uma outra pasta `portal_biblioteca`. Isso evita ter que ficar navegando entre pastas.
 
-### Executando o Projeto
+### Executar o Projeto
 
-Inicie a execução do projeto django criado utilizando o comando abaixo:
+Inicie a execução do projeto Django:
 
 ```bash
 python3 manage.py runserver
 ```
 
-**Explicação:** O comando acima é usado no Django para iniciar um servidor de desenvolvimento local. Ele é uma parte fundamental do processo de desenvolvimento web com o Django, pois permite que você execute e teste sua aplicação web em um ambiente de desenvolvimento local antes de implantá-la em um servidor web de produção. Ele inicia um servidor HTTP embutido no Django que pode lidar com solicitações HTTP. Por padrão, o servidor de desenvolvimento escuta na porta 8000, mas você pode especificar uma porta diferente como argumento opcional, por exemplo, `python3 manage.py runserver 8081`.
+**Explicação:** o comando acima é usado no Django para iniciar um servidor de desenvolvimento local. Ele é uma parte fundamental do processo de desenvolvimento web com o Django, pois permite que você execute e teste sua aplicação web em um ambiente de desenvolvimento local antes de implantá-la em um servidor web de produção. Ele inicia um servidor HTTP embutido no Django que pode lidar com solicitações HTTP. Por padrão, o servidor de desenvolvimento escuta na porta 8000, mas você pode especificar uma porta diferente como argumento opcional, por exemplo, `python3 manage.py runserver 8081`.
 
-Acesse através do navegdor web a página [http://127.0.0.1:8000/](http://127.0.0.1:8000/). Uma página padrão do django deve aparecer (semelhante a mostrada abaixo).
+Acesse no navegador a página [http://127.0.0.1:8000/](http://127.0.0.1:8000/). A página padrão do Django deverá ser exibida (semelhante a imagem abaixo).
 
 ![Tela Padrão Django](./docs/tela-django-inicial.png)
 
-### Criando um Aplicativo
+### Criar um Aplicativo
 
-Execute o comando abaixo para criar um aplicativo chamado `biblioteca` dentro do projeto `portal_biblioteca`:
+Crie um aplicativo (app) chamado `biblioteca` dentro do projeto:
 
 ```bash
 django-admin startapp biblioteca
@@ -363,7 +316,7 @@ O comando abaixo faz a mesma coisa:
 python3 manage.py startapp biblioteca
 ```
 
-**Explicação:** O comando acima é usado para criar uma nova aplicação dentro de um projeto Django. Após executar esse comando, você terá uma nova pasta chamada `biblioteca` dentro do seu projeto Django, contendo uma estrutura inicial de arquivos Python que você pode começar a editar para construir a lógica da sua aplicação. Uma aplicação (ou app) é um componente reutilizável e modular que realiza uma função específica dentro de um projeto Django. Um projeto Django pode conter várias aplicações, cada uma projetada para lidar com uma parte específica da funcionalidade do site. Cada aplicação é composta por:
+**Explicação:** o comando acima é usado para criar uma nova aplicação dentro de um projeto Django. Após executar esse comando, você terá uma nova pasta chamada `biblioteca` dentro do seu projeto Django, contendo uma estrutura inicial de arquivos Python que você pode começar a editar para construir a lógica da sua aplicação. Uma aplicação (ou app) é um componente reutilizável e modular que realiza uma função específica dentro de um projeto Django. Um projeto Django pode conter várias aplicações, cada uma projetada para lidar com uma parte específica da funcionalidade do site. Cada aplicação é composta por:
 
 * **Models:** Definem a estrutura e o comportamento dos dados. Os modelos são utilizados para interagir com o banco de dados e representar os objetos do mundo real dentro do sistema.
 
@@ -375,21 +328,21 @@ python3 manage.py startapp biblioteca
 
 * **URLs:** Mapeiam as URLs do site para as views correspondentes. Cada aplicação geralmente tem seu próprio arquivo urls.py para definir os padrões de URL específicos dessa aplicação.
 
-### Entendendo a Estrutura de Diretórios do Django
+### Conhecer a Estrutura de Diretórios do Django
 
-A estrutura de diretórios de um projeto Django é organizada de maneira a separar os diferentes componentes da aplicação, facilitando o desenvolvimento e a manutenção. A seguir, temos a estrutura geral de diretórios de um projeto feito em Django. 
+A estrutura de diretórios de um projeto Django é organizada de maneira a separar os diferentes componentes da aplicação, facilitando o desenvolvimento e a manutenção. A seguir, temos a estrutura geral de diretórios de um projeto feito em Django.
 
 ```text
-myproject/
+mysite/
 │
 ├── manage.py
-├── myproject/
+├── mysite/
 │   ├── __init__.py
 │   ├── asgi.py
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
-├── app1/
+├── myapp1/
 │   ├── migrations/
 │   ├── templates/
 │   ├── __init__.py
@@ -399,7 +352,7 @@ myproject/
 │   ├── views.py
 │   ├── urls.py
 │   └── tests.py
-├── app2/
+├── myapp2/
 │   ├── migrations/
 │   ├── templates/
 │   ├── __init__.py
@@ -413,13 +366,13 @@ myproject/
 ```
 
 * **manage.py**: Um script que permite interagir com o projeto Django a partir da linha de comando. Ele é usado para executar comandos como iniciar o servidor, migrar o banco de dados e criar superusuários.
-* **myproject/**: Esta pasta contém os arquivos de configuração e o núcleo do projeto Django. Normalmente, o nome da pasta do projeto coincide com o nome do projeto. Aqui estão os arquivos comuns:
+* **mysite/**: Esta pasta contém os arquivos de configuração e o núcleo do projeto Django. Normalmente, o nome da pasta do projeto coincide com o nome do projeto. Aqui estão os arquivos comuns:
   * **__init__.py**: Indica ao Python que essa pasta deve ser tratada como um pacote.
   * **asgi.py**: Ponto de entrada para servidores ASGI (usado para rodar a aplicação em modo assíncrono).
   * **settings.py**: Arquivo de configuração onde você define parâmetros como a conexão com o banco de dados, apps instalados, middleware, etc.
   * **urls.py**: Arquivo que define os mapeamentos de URL do projeto para as views.
   * **wsgi.py**: Ponto de entrada para servidores WSGI (usado para rodar a aplicação em modo síncrono).
-* **app/**: O Django incentiva o uso de uma abordagem modular, onde a funcionalidade de uma aplicação é dividida em "apps" individuais. Cada app tem sua própria pasta dentro do projeto e contém a lógica de uma parte específica do sistema.
+* **myapp/**: O Django incentiva o uso de uma abordagem modular, onde a funcionalidade de uma aplicação é dividida em "apps" individuais. Cada app tem sua própria pasta dentro do projeto e contém a lógica de uma parte específica do sistema.
   * **migrations/**: Contém arquivos de migração que Django usa para gerenciar o banco de dados. Cada migração reflete uma mudança no modelo de dados.
   * **templates/**: Essa pasta contém os arquivos HTML que serão renderizados pelas views. Cada app pode ter sua própria pasta `templates/` ou você pode criar uma pasta `templates/` global na raiz do projeto.
   * **__init__.py**: Marca a pasta como um pacote Python.
@@ -429,11 +382,11 @@ myproject/
   * **views.py**: Contém as funções ou classes que processam as requisições e retornam as respostas.
   * **urls.py**: Define as rotas específicas para as views deste app.
   * **tests.py**: Contém testes automatizados para a aplicação.
-  * **static/**: Essa pasta contém arquivos estáticos, como CSS, JavaScript e imagens. Os arquivos dentro de `static/` são usados para a apresentação visual da aplicação.
+* **static/**: Essa pasta contém arquivos estáticos, como CSS, JavaScript e imagens. Os arquivos dentro de `static/` são usados para a apresentação visual da aplicação.
 
-### Criando a Primeira View no Django
+### Criar a Primeira View
 
-Primeiramente, edite o arquivo de `views.py` (na pasta `biblioteca`) e coloque o seguinte conteúdo:
+Edite o arquivo de `biblioteca/views.py` e coloque o conteúdo:
 
 ```python
 from django.shortcuts import render
@@ -443,7 +396,7 @@ def principal(request):
     return HttpResponse("Olá Mundo! - Portal Biblioteca")
 ```
 
-Em seguida, crie um arquivo chamado `urls.py` na pasta`biblioteca` e digite nele o código abaixo:
+Crie um arquivo `urls.py` na pasta `biblioteca` com o conteúdo:
 
 ```python
 from django.urls import path
@@ -454,11 +407,13 @@ urlpatterns = [
 ]
 ```
 
-Existe um arquivo chamado `urls.py` na pasta `portal_biblioteca`, abra esse arquivo e coloque o seguinte conteúdo.
+Essa configuração registra a rota `/` que chama `views.principal`. Assim, quando o usuário acessar a rota ou URL [http://127.0.0.1:8000/](http://127.0.0.1:8000/), o método `views.principal` será executado.
+
+Abra o arquivo chamado `urls.py` da pasta `portal_biblioteca` e inclua as rotas do app, como abaixo:
 
 ```python
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import path, include
 
 urlpatterns = [
     path('', include('biblioteca.urls')),
@@ -466,19 +421,20 @@ urlpatterns = [
 ]
 ```
 
-Em seguida, execute o projeto django (veja se está tudo funcionando):
+Inicie o servidor de desenvolvimento:
 
 ```bash
 python3 manage.py runserver
 ```
 
-Por fim, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000) e analise o resultado.
+* Acesse [http://127.0.0.1:8000/](http://127.0.0.1:8000/). A mensagem **"Olá Mundo! - Portal Biblioteca"** deverá ser exibida.
+* Para encerrar o servidor: `Ctrl+C`.
 
-### Criando o Primeiro Template no Django
+### Criar o Primeiro Template
 
-Primeiramente, crie uma pasta `templates` dentro da pasta `biblioteca` e crie um arquivo HTML chamado `principal.html`.
+Crie uma pasta `templates` dentro da pasta `biblioteca` e crie um arquivo HTML chamado `principal.html`.
 
-Abra o arquivo HTML e insira o seguinte:
+Abra o arquivo `biblioteca/templates/principal.html` e insira o conteúdo:
 
 ```html
 <!DOCTYPE html>
@@ -488,11 +444,8 @@ Abra o arquivo HTML e insira o seguinte:
         <title>Portal Biblioteca</title>
     </head>
     <body>
-
     <h1>Olá Mundo!</h1>
-
     <p>Bem-vindo ao meu primeiro projeto Django!</p>
-
     </body>
 </html>
 ```
@@ -508,7 +461,7 @@ def principal(request):
     return HttpResponse(template.render())
 ```
 
-Para poder trabalhar com coisas mais complicadas do que "Hello World!" injetado diretamente no Python, temos que dizer ao Django que um novo aplicativo foi criado. Isso é feito no arquivo `settings.py` da pasta `portal_biblioteca`. Procure a lista `INSTALLED_APPS[]` e adicione o aplicativo `biblioteca` que foi criado assim:
+Para poder trabalhar com coisas mais complicadas do que **"Olá Mundo!"**, temos que dizer ao Django que um novo aplicativo foi criado. Isso é feito no arquivo `portal_biblioteca/settings.py`. Procure a lista `INSTALLED_APPS[]` e adicione o aplicativo `biblioteca` que foi criado. Veja o exemplo abaixo:
 
 ```python
 INSTALLED_APPS = [
@@ -518,35 +471,34 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'biblioteca',                       # inclua o app criado aqui
+    'biblioteca',                  # registre o app criado aqui
 ]
 ```
 
-Em seguida, execute este comando:
+Em seguida, execute o comando abaixo para aplicar migrações:
 
 ```bash
 python3 manage.py migrate
 ```
 
-**OBS:** Este comando aplica as migrações, ou seja, atualiza o esquema do banco de dados de acordo com as mudanças nos modelos.
+**Observação:** este comando atualiza o esquema do banco de dados conforme os apps instalados.
 
-Em seguida, execute o projeto django (veja se está tudo funcionando):
+Inicie o servidor de desenvolvimento:
 
 ```bash
 python3 manage.py runserver
 ```
 
-Por fim, acesse a URL [http://127.0.0.1:8000/](http://127.0.0.1:8000/`) e analise o resultado.
+Acesse: [http://127.0.0.1:8000/](http://127.0.0.1:8000/). A página criada deverá ser exibida.
 
-### Melhorando as Telas do Django
+### Adicionar CSS ao Template
 
-Agora, iremos melhorar a aparência da tela principal do nosso sistema.
+Nesta etapa, vamos melhorar a aparência da tela principal do nosso sistema. Para isso, iremos aplicar estilos CSS a página principal.
 
-Assim, edite o arquivo HTML com nome `principal.html` na pasta `templates` com o seguinte conteúdo:
+Edite o arquivo HTML `biblioteca/templates/principal.html` e substitua o conteúdo pelo seguinte:
 
 ```html
 {% load static %}
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -571,22 +523,28 @@ Assim, edite o arquivo HTML com nome `principal.html` na pasta `templates` com o
 </html>
 ```
 
-Em seguida, crie uma pasta chamada `staticfiles` na raiz do projeto (pasta `portal_biblioteca`). Crie também uma pasta chamada `productionfiles` também na raiz do projeto (pasta `portal_biblioteca`).
+**Explicação do Código HTML:**
 
-Em seguida, crie um arquivo CSS chamado `mystyles.css` na pasta `staticfiles` com o seguinte conteúdo:
+* `{% load static %}`: carrega, para o template atual, a biblioteca de template tags responsável por resolver o caminho lógico de arquivos estáticos (CSS, JavaScript, imagens).
+* `{% static 'mystyles.css' %}`: resolve o caminho lógico do arquivo estático `mystyles.css` para ser utilizado no projeto.
+* `{% static 'logo-portal.png' %}`: resolve o caminho lógico do arquivo estático `logo-portal.png` para ser utilizado no projeto.
+
+Na raiz do projeto (`code`), crie as pastas `staticfiles` e `productionfiles`.
+
+Crie o arquivo `staticfiles/mystyles.css` com o conteúdo abaixo:
 
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
 body {
-  margin:0;
+  margin: 0;
   font: 600 18px 'Source Sans Pro', sans-serif;
   letter-spacing: 0.64px;
   color: #585d74;
 }
 .topnav {
-  background-color:#375BDC;
-  color:#ffffff;
-  padding:10px;
+  background-color: #375BDC;
+  color: #ffffff;
+  padding: 10px;
 }
 .topnav a:link, .topnav a:visited {
   text-decoration: none;
@@ -641,14 +599,16 @@ a:link, a:visited {
 }
 ```
 
-Em seguida, copie o arquivo chamado `logo-portal.png` (baixado do github na pasta `docs`) para a pasta `staticfiles`.
+Copie o arquivo `logo-portal.png` (obtido no repositório, pasta `docs`) para a pasta `staticfiles`.
 
-Em seguida, no final do arquivo `settings.py` na pasta `portal_biblioteca` adicione o seguinte conteúdo:
+Ao final do arquivo `portal_biblioteca/settings.py`, inclua:
 
 ```python
 ...
 
 STATIC_URL = 'static/'
+
+# as linhas abaixo devem ser acrescentadas
 
 STATIC_ROOT = BASE_DIR / 'productionfiles'
 
@@ -657,33 +617,32 @@ STATICFILES_DIRS = [
 ]
 ```
 
-Em seguida, execute o seguinte comando abaixo:
+Em seguida, execute o comando abaixo:
 
 ```bash
 python3 manage.py collectstatic
 ```
 
-**Explicação:** O comando acima informa ao Django para entrar nas pastas com arquivos estáticos e fazer uma cópia de todos os arquivos dessas pastas para a pasta `productionfiles`. Os arquivos estáticos incluem, por exemplo, arquivos CSS, JavaScript, imagens e outros recursos que não são gerados dinamicamente pelo Django, mas são servidos diretamente pelo servidor web. A principal finalidade do comando `collectstatic` é preparar os arquivos estáticos para implantação em um ambiente de produção. Quando você está desenvolvendo localmente, os arquivos estáticos podem estar espalhados em diferentes diretórios dentro de cada aplicativo, o que não é eficiente para servir em produção. Portanto, você coleta todos esses arquivos em um único local antes de implantar sua aplicação em um servidor web de produção.
+**Explicação:** o comando acima informa ao Django para entrar nas pastas com arquivos estáticos (`staticfiles`) e fazer uma cópia de todos os arquivos dessas pastas para a pasta `productionfiles`. Os arquivos estáticos incluem, por exemplo, arquivos CSS, JavaScript, imagens e outros recursos que não são gerados dinamicamente pelo Django, mas são servidos diretamente pelo servidor web. A principal finalidade do comando `collectstatic` é preparar os arquivos estáticos para implantação em um ambiente de produção. Quando você está desenvolvendo localmente, os arquivos estáticos podem estar espalhados em diferentes diretórios dentro de cada aplicativo, o que não é eficiente para servir em produção. Portanto, você coleta todos esses arquivos em um único local antes de implantar sua aplicação em um servidor web de produção.
 
-Em seguida, execute o projeto django:
+Execute o servidor de desenvolvimento:
 
 ```bash
 python3 manage.py runserver
 ```
 
-Por fim, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000`) e analise o resultado.
+Acesse: [http://127.0.0.1:8000](http://127.0.0.1:8000) e confira o resultado da página.
 
-**OBS:** Repare que os links para as outras páginas ainda não funcionam. Isso é esperado visto que ainda não criamos as outras páginas e rotas.
+**Observação:** os links do menu ainda não funcionam, pois as rotas e páginas correspondentes não foram implementadas.
 
-### Criando a Página Livros no Django
+### Criar a Página Livros
 
-Agora, iremos criar a tela da página de Livros do nosso sistema.
+Nesta etapa, vamos criar a tela da página de Livros do nosso sistema.
 
-Assim, crie um arquivo HTML com nome `livros.html` na pasta `templates` com o seguinte conteúdo:
+Crie um arquivo HTML `biblioteca/templates/livros.html` e coloque o seguinte conteúdo:
 
 ```html
 {% load static %}
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -712,7 +671,7 @@ Assim, crie um arquivo HTML com nome `livros.html` na pasta `templates` com o se
 </html>
 ```
 
-Em seguida, edite o arquivo `views.py` na pasta `biblioteca` e adicione o seguinte conteúdo ao final do arquivo:
+Edite o arquivo `biblioteca/views.py` e adicione o seguinte conteúdo ao final do arquivo:
 
 ```python
 ...
@@ -776,35 +735,32 @@ def livros(request):      # função adicionada
     return HttpResponse(template.render(context, request))
 ```
 
-Em seguida, edite o arquivo `urls.py` na pasta `biblioteca` e coloque o seguinte conteúdo:
+Edite o arquivo `biblioteca/urls.py` e coloque o seguinte conteúdo:
 
 ```python
-from django.urls import path
-from . import views
-
+...
 urlpatterns = [
     path('', views.principal, name='principal'),
     path('livros', views.livros, name='livros'),  #linha adicionada
 ]
 ```
 
-Em seguida, execute o projeto django:
+Execute o servidor de desenvolvimento:
 
 ```bash
 python3 manage.py runserver
 ```
 
-Por fim, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000`) e analise o resultado tanto na página principal, quanto a página livros.
+Acesse: [http://127.0.0.1:8000/](http://127.0.0.1:8000/) e analise o resultado tanto na página principal, quanto a página livros.
 
-### Criando a Página TCCs no Django
+### Criar a Página TCCs
 
-Agora, iremos criar a tela da página de TCCs do nosso sistema.
+Nesta etapa, vamos criar a tela da página de TCCs do nosso sistema.
 
-Assim, crie um arquivo HTML com nome `tccs.html` na pasta `templates` com o seguinte conteúdo:
+Crie um arquivo HTML `biblioteca/templates/tccs.html` e coloque o seguinte conteúdo:
 
 ```html
 {% load static %}
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -833,7 +789,7 @@ Assim, crie um arquivo HTML com nome `tccs.html` na pasta `templates` com o segu
 </html>
 ```
 
-Em seguida, adicione ao arquivo `views.py` na pasta `biblioteca` o seguinte método:
+Edite o arquivo `biblioteca/views.py` e adicione o seguinte conteúdo ao final do arquivo:
 
 ```python
 ...
@@ -882,12 +838,10 @@ def tccs(request):      # função adicionada
     return HttpResponse(template.render(context, request))
 ```
 
-Em seguida, edite o arquivo `urls.py` na pasta `biblioteca` e coloque o seguinte conteúdo:
+Edite o arquivo `biblioteca/urls.py` e coloque o seguinte conteúdo:
 
 ```python
-from django.urls import path
-from . import views
-
+...
 urlpatterns = [
     path('', views.principal, name='principal'),
     path('livros', views.livros, name='livros'),
@@ -895,23 +849,22 @@ urlpatterns = [
 ]
 ```
 
-Em seguida, execute o projeto django:
+Execute o servidor de desenvolvimento:
 
 ```bash
 python3 manage.py runserver
 ```
 
-Por fim, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000`) e analise o resultado nas páginas principal, livros e TCCs.
+Acesse: [http://127.0.0.1:8000/](http://127.0.0.1:8000/) e analise o resultado nas páginas principal, livros e TCCs.
 
-### Adicionando Tela de Detalhes aos TCCs
+### Adicionar Tela de Detalhes aos TCCs
 
-Agora, iremos adicionar uma tela de detalhes sobre os TCCs em nosso sistema.
+Nesta etapa, vamos adicionar uma tela de detalhes sobre os TCCs em nosso sistema.
 
-Assim, crie um arquivo HTML com nome `tcc_detalhes.html` na pasta `templates` com o seguinte conteúdo:
+Crie um arquivo HTML `biblioteca/templates/tcc_detalhes.html` e coloque o seguinte conteúdo:
 
 ```html
 {% load static %}
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -935,26 +888,29 @@ Assim, crie um arquivo HTML com nome `tcc_detalhes.html` na pasta `templates` co
             <p><em>Orientador:</em> {{ tcc.orientador }}</p>
             <p><em>Ano:</em> {{ tcc.ano }}</p>
         </div>
-
-        <p><center>Volte para <a href="/tccs">TCCs</a></center></p>
-        
+        <p><center>Volte para <a href="/tccs">TCCs</a></center></p>        
     </body>
 </html>
 ```
 
-Em seguida, edite o HTML com nome `tccs.html` na pasta `templates` com o seguinte conteúdo:
+Edite o arquivo HTML `biblioteca/templates/tccs.html` e inclua o seguinte conteúdo:
 
 ```html
 ...
             <ul>
                 {% for tcc in tccs %}
-                <li onclick="window.location = 'tccs/detalhes/{{ tcc.id }}'"><em>Título:</em> {{ tcc.titulo }} <br> <em>Autor:</em> {{ tcc.autor }} </li>  <!--Linha editada -->
+                <!-- Início das linhas editadas -->
+                <li onclick="window.location = 'tccs/detalhes/{{ tcc.id }}'">
+                    <em>Título:</em> {{ tcc.titulo }} <br> 
+                    <em>Autor:</em> {{ tcc.autor }} 
+                </li>  
+                <!-- Fim das linhas editadas -->
                 {% endfor %}
             </ul>
 ...
 ```
 
-Em seguida, adicione ao arquivo `views.py` na pasta `biblioteca` o seguinte método:
+Edite o arquivo `biblioteca/views.py` e adicione o seguinte conteúdo ao final do arquivo:
 
 ```python
 ...
@@ -1005,12 +961,10 @@ def tcc_detalhes(request, id):  # função adicionada
     return HttpResponse(template.render(context, request))
 ```
 
-Em seguida, edite o arquivo `urls.py` na pasta `biblioteca` e coloque o seguinte conteúdo:
+Edite o arquivo `biblioteca/urls.py` e coloque o seguinte conteúdo:
 
 ```python
-from django.urls import path
-from . import views
-
+...
 urlpatterns = [
     path('', views.principal, name='principal'),
     path('livros', views.livros, name='livros'),
@@ -1019,25 +973,24 @@ urlpatterns = [
 ]
 ```
 
-Em seguida, execute o projeto django:
+Execute o servidor de desenvolvimento:
 
 ```bash
 python3 manage.py runserver
 ```
 
-Por fim, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000`) e analise o resultado (na página de TCCs e clique sobre um TCC para ver os detalhes).
+Acesse: [http://127.0.0.1:8000/tccs](http://127.0.0.1:8000/tccs) e analise o resultado, clique sobre um TCC para ver os seus detalhes.
 
-### Adicionando Template Mestre no Django
+### Adicionar Template Mestre
 
 A seguir iremos adicionar um template mestre (base) no Django.
 
 Se você analisar os códigos HTMLs das páginas `principal.html`, `livros.html`, `tccs.html` e `tcc_detalhes.html` você perceberá que tem muitos códigos duplicados. O Django fornece uma maneira de criar um "modelo pai" que você pode incluir em todas as páginas para evitar repetição de código.
 
-Comece criando um template chamado `base.html` dentro da pasta `template`, com o seguinte conteúdo:
+Crie um arquivo HTML `biblioteca/templates/base.html` e coloque o seguinte conteúdo:
 
 ```html
 {% load static %}
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -1060,11 +1013,11 @@ Comece criando um template chamado `base.html` dentro da pasta `template`, com o
 </html>
 ```
 
-Agora, precisamos modificar os templates (páginas) anteriormente criados. Todas as páginas `principal.html`, `livros.html`, `tccs.html` e `tcc_detalhes.html` precisam ser modificadas para extender da página base/mestre nomeada de `base.html`.
+Modifique os templates (páginas) anteriormente criados. Todas as páginas `principal.html`, `livros.html`, `tccs.html` e `tcc_detalhes.html` precisam ser modificadas para extender da página mestre nomeada de `base.html`.
 
 Isso é feito incluindo o modelo mestre com a tag `{% extends %}`  e inserindo um bloco `titulo` e um bloco `conteudo`:
 
-Assim, modifique a página `principal.html` para o seguinte conteúdo:
+Modifique a página `principal.html` e coloque o seguinte conteúdo:
 
 ```html
 {% extends "base.html" %}
@@ -1083,7 +1036,7 @@ Assim, modifique a página `principal.html` para o seguinte conteúdo:
 {% endblock %}
 ```
 
-Em seguida, modifique a página `livros.html` para o seguinte conteúdo:
+Modifique a página `livros.html` e coloque o seguinte conteúdo:
 
 ```html
 {% extends "base.html" %}
@@ -1104,7 +1057,7 @@ Em seguida, modifique a página `livros.html` para o seguinte conteúdo:
 {% endblock %}
 ```
 
-Em seguida, modifique a página `tccs.html` para o seguinte conteúdo:
+Modifique a página `tccs.html` e coloque o seguinte conteúdo:
 
 ```html
 {% extends "base.html" %}
@@ -1118,14 +1071,17 @@ Em seguida, modifique a página `tccs.html` para o seguinte conteúdo:
         <h1>Trabalhos de Conclusão de Curso</h1>
         <ul>
             {% for tcc in tccs %}
-            <li onclick="window.location = 'tccs/detalhes/{{ tcc.id }}'"><em>Título:</em> {{ tcc.titulo }} <br> <em>Autor:</em> {{ tcc.autor }} </li>
+            <li onclick="window.location = 'tccs/detalhes/{{ tcc.id }}'">
+                <em>Título:</em> {{ tcc.titulo }} <br> 
+                <em>Autor:</em> {{ tcc.autor }} 
+            </li>
             {% endfor %}
         </ul>
     </div>
 {% endblock %}
 ```
 
-Em seguida, modifique a página `tcc_detalhes.html` para o seguinte conteúdo:
+Modifique a página `tcc_detalhes.html` e coloque o seguinte conteúdo:
 
 ```html
 {% extends "base.html" %}
@@ -1147,19 +1103,19 @@ Em seguida, modifique a página `tcc_detalhes.html` para o seguinte conteúdo:
 {% endblock %}
 ```
 
-Em seguida, execute o projeto django:
+Execute o servidor de desenvolvimento:
 
 ```bash
 python3 manage.py runserver
 ```
 
-Por fim, acesse a URL [http://127.0.0.1:8000](http://127.0.0.1:8000`) e analise o resultado.
+Acesse: [http://127.0.0.1:8000/](http://127.0.0.1:8000/) e analise o resultado.
 
-### Incluindo Código JavaScript no Projeto
+### Adicionar Código JavaScript no Projeto
 
 Até o presente momento não temos código JavaScript no nosso projeto. A fim de ilustração iremos fazer uma pequena tela de dashboard em nosso projeto com gráficos em JavaScript.
 
-Assim, na pasta `templates` crie um arquivo chamado `dashboard.html`. Nesse arquivo, coloque o seguinte conteúdo:
+Crie um arquivo `biblioteca/templates/dashboard.html` e coloque o seguinte conteúdo:
 
 ```html
 {% extends "base.html" %}
@@ -1203,40 +1159,38 @@ Assim, na pasta `templates` crie um arquivo chamado `dashboard.html`. Nesse arqu
 {% endblock %}
 ```
 
-Em seguida, precisamos atualizar o arquivo de `views.py` nas pasta `biblioteca`. Adicione a função abaixo nesse arquivo.
+Edite o arquivo de `biblioteca/views.py` e adicione a função destacada abaixo:
 
 ```python
 ...
-
 def dashboard(request):        # adicione essa função
     template = loader.get_template('dashboard.html')
     return HttpResponse(template.render())
 ```
 
-Agora, precisamos atualizar o arquivo de `urls.py` na pasta `biblioteca`. No arquivo adicione a linha destacada:
+Edite o arquivo de `biblioteca/urls.py` e adicione a linha destacada:
 
 ```python
 ...
-
 urlpatterns = [
     ...
     path('dashboard', views.dashboard, name='dashboard'), # adicione esta linha
 ]
 ```
 
-Agora, reinicie o servidor:
+Execute o servidor de desenvolvimento:
 
 ```bash
 python3 manage.py runserver
 ```
 
-Por fim, acesse o endereço [127.0.0.1:8000/dashboard](127.0.0.1:8000/dashboard) e analise o resultado.
+Acesse: [http://127.0.0.1:8000/dashboard](http://127.0.0.1:8000/dashboard) e analise o resultado.
 
-### Modularizando o Código JavaScript no Projeto
+### Modularizar Código JavaScript no Projeto
 
-Agora, iremos modularizar o código JavaScript.
+Nesta etapa, iremos modularizar o código JavaScript.
 
-Assim, precisamos atualizar o código do `dashboard.html` da pasta `templates`. O conteúdo desse arquivo deve ficar assim:
+Atualize o código do `biblioteca/templates/dashboard.html` e coloque o seguinte conteúdo:
 
 ```html
 {% extends "base.html" %}
@@ -1260,7 +1214,7 @@ Assim, precisamos atualizar o código do `dashboard.html` da pasta `templates`. 
 {% endblock %}
 ```
 
-Em seguida, na pasta `staticfiles` crie um arquivo chamado `myscripts.js`. Coloque nesse arquivo o seguinte conteúdo:
+Crie um arquivo `staticfiles/myscripts.js` e coloque o seguinte conteúdo:
 
 ```javascript
 function graficoBarras() {
@@ -1289,23 +1243,23 @@ function graficoBarras() {
 graficoBarras();
 ```
 
-Em seguida, execute o seguinte comando abaixo:
+Execute o comando abaixo:
 
 ```bash
 python3 manage.py collectstatic
 ```
 
-Agora, reinicie o servidor:
+Execute o servidor de desenvolvimento:
 
 ```bash
 python3 manage.py runserver
 ```
 
-Agora, atualize o endereço [127.0.0.1:8000/dashboard](127.0.0.1:8000/dashboard) e analise o resultado.
+Acesse: [http://127.0.0.1:8000/dashboard](http://127.0.0.1:8000/dashboard) e analise o resultado.
 
 Nessa etapa, desejamos também colocar um gráfico de pizza no nosso dashboard.
 
-Assim, atualize o arquivo de `dashboard.html` na pasta `templates`.
+Edite o arquivo de `biblioteca/templates/dashboard.html` e coloque o conteúdo:
 
 ```html
 {% extends "base.html" %}
@@ -1334,7 +1288,7 @@ Assim, atualize o arquivo de `dashboard.html` na pasta `templates`.
 {% endblock %}
 ```
 
-Em seguida, na pasta `staticfiles` edite o arquivo `myscripts.js` adicionando o seguinte conteúdo:
+Edite o arquivo `staticfiles/myscripts.js` e adicione o seguinte conteúdo:
 
 ```javascript
 ...
@@ -1366,19 +1320,19 @@ function graficoPizza(){
 graficoPizza();
 ```
 
-Em seguida, execute o seguinte comando abaixo:
+Execute o comando abaixo:
 
 ```bash
 python3 manage.py collectstatic
 ```
 
-Agora, reinicie o servidor:
+Execute o servidor de desenvolvimento:
 
 ```bash
 python3 manage.py runserver
 ```
 
-Por fim, acesse o endereço [127.0.0.1:8000/dashboard](127.0.0.1:8000/dashboard) e analise o resultado.
+Acesse: [http://127.0.0.1:8000/dashboard](http://127.0.0.1:8000/dashboard) e analise o resultado.
 
 Para mais informações sobre gráficos em JavaScript, consulte a documentação da biblioteca [chart.js](https://www.chartjs.org/).
 
@@ -1386,7 +1340,7 @@ Para mais informações sobre gráficos em JavaScript, consulte a documentação
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-Este tutorial foi inspirado nos seguintes recursos:
+Este tutorial foi inspirado nos seguintes materiais:
 
-* [Documentação oficial do django](https://docs.djangoproject.com/pt-br/5.0/)
-* [Curso de Django da w3schools](https://www.w3schools.com/django/index.php)
+* [Documentação oficial do Django](https://docs.djangoproject.com/pt-br/5.0/)
+* [Curso de Django da W3Schools](https://www.w3schools.com/django/index.php)
