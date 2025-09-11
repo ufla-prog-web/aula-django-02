@@ -677,7 +677,6 @@ Edite o arquivo `biblioteca/views.py` e adicione o seguinte conteúdo ao final d
 ...
 
 def livros(request):      # função adicionada
-    template = loader.get_template('livros.html')
     context = {
         'livros': [
             {
@@ -732,8 +731,11 @@ def livros(request):      # função adicionada
             }
         ]
     }
+    template = loader.get_template('livros.html')
     return HttpResponse(template.render(context, request))
 ```
+
+**Observação:** no exemplo acima os dados foram inseridos diretamente no Python, no futuro eles virão do Banco de Dados.
 
 Edite o arquivo `biblioteca/urls.py` e coloque o seguinte conteúdo:
 
@@ -795,7 +797,6 @@ Edite o arquivo `biblioteca/views.py` e adicione o seguinte conteúdo ao final d
 ...
 
 def tccs(request):      # função adicionada
-    template = loader.get_template('tccs.html')
     context = {
         'tccs': [
             {
@@ -835,8 +836,11 @@ def tccs(request):      # função adicionada
             }
         ]
     }
+    template = loader.get_template('tccs.html')
     return HttpResponse(template.render(context, request))
 ```
+
+**Observação:** no exemplo acima os dados foram inseridos diretamente no Python, no futuro eles virão do Banco de Dados.
 
 Edite o arquivo `biblioteca/urls.py` e coloque o seguinte conteúdo:
 
@@ -857,9 +861,9 @@ python3 manage.py runserver
 
 Acesse: [http://127.0.0.1:8000/](http://127.0.0.1:8000/) e analise o resultado nas páginas principal, livros e TCCs.
 
-### Adicionar Tela de Detalhes aos TCCs
+### Criar a Página de Detalhes dos TCCs
 
-Nesta etapa, vamos adicionar uma tela de detalhes sobre os TCCs em nosso sistema.
+Nesta etapa, vamos criar uma página de detalhes dos TCCs em nosso sistema. Assim, quando o usuário clicar sobre um determinado TCC uma nova página com mais detalhes será exibida.
 
 Crie um arquivo HTML `biblioteca/templates/tcc_detalhes.html` e coloque o seguinte conteúdo:
 
@@ -903,7 +907,7 @@ Edite o arquivo HTML `biblioteca/templates/tccs.html` e inclua o seguinte conte�
                 <li onclick="window.location = 'tccs/detalhes/{{ tcc.id }}'">
                     <em>Título:</em> {{ tcc.titulo }} <br> 
                     <em>Autor:</em> {{ tcc.autor }} 
-                </li>  
+                </li>
                 <!-- Fim das linhas editadas -->
                 {% endfor %}
             </ul>
@@ -914,7 +918,6 @@ Edite o arquivo `biblioteca/views.py` e adicione o seguinte conteúdo ao final d
 
 ```python
 ...
-
 def tcc_detalhes(request, id):  # função adicionada
     tccs = [
         {
@@ -954,10 +957,10 @@ def tcc_detalhes(request, id):  # função adicionada
         }
     ]
     tcc = tccs[id-1]
-    template = loader.get_template('tcc_detalhes.html')
     context = {
         'tcc': tcc,
     }
+    template = loader.get_template('tcc_detalhes.html')
     return HttpResponse(template.render(context, request))
 ```
 
@@ -972,6 +975,8 @@ urlpatterns = [
     path('tccs/detalhes/<int:id>', views.tcc_detalhes, name='tcc_detalhes'), # linha adicionada
 ]
 ```
+
+**Explicação:** o código `path('tccs/detalhes/<int:id>', ...)` cria uma rota que casa URLs do tipo `tccs/detalhes/42` (sem a barra final). O campo `<int:id>` é um path converter e aceita apenas dígitos, converte para `int` e passa à view como parâmetro nomeado `id`. O código `views.tcc_detalhes` descreve a função que será chamada de view que receberá `request` e `id` e retornará a resposta HTTP.
 
 Execute o servidor de desenvolvimento:
 
@@ -1111,7 +1116,7 @@ python3 manage.py runserver
 
 Acesse: [http://127.0.0.1:8000/](http://127.0.0.1:8000/) e analise o resultado.
 
-### Adicionar Código JavaScript no Projeto
+### Adicionar JavaScript no Projeto
 
 Até o presente momento não temos código JavaScript no nosso projeto. A fim de ilustração iremos fazer uma pequena tela de dashboard em nosso projeto com gráficos em JavaScript.
 
@@ -1186,9 +1191,9 @@ python3 manage.py runserver
 
 Acesse: [http://127.0.0.1:8000/dashboard](http://127.0.0.1:8000/dashboard) e analise o resultado.
 
-### Modularizar Código JavaScript no Projeto
+### Modularizar o Código JavaScript
 
-Nesta etapa, iremos modularizar o código JavaScript.
+Nesta etapa, iremos modularizar o código JavaScript. Na etapa anterior, o código JavaScript estava inserido dentro do HTML, em muitos casos queremos criar um script separado só para isso.
 
 Atualize o código do `biblioteca/templates/dashboard.html` e coloque o seguinte conteúdo:
 
