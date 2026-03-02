@@ -134,7 +134,9 @@ A arquitetura web de três camadas é um padrão de design de software que organ
 
 Essa separação facilita a manutenção e escalabilidade da aplicação, permitindo que cada camada possa ser modificada ou melhorada de forma independente.
 
-![Arquitetura das Aplicações Web](./docs/arquitetura-web.png)
+![Arquitetura das Aplicações Web](./docs/arquitetura-web2.png)
+
+Fonte: Baseada em [https://blog.grancursosonline.com.br/arquitetura-em-tres-camadas-para-aplicacoes-web/](https://blog.grancursosonline.com.br/arquitetura-em-tres-camadas-para-aplicacoes-web/)
 
 ### Arquitetura MVT do Django
 
