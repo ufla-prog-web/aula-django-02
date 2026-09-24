@@ -19,7 +19,7 @@
 * [Fundamentos Teóricos](#fundamentos-teóricos)
 * [Objetivo da Aula](#objetivo-da-aula)
 * [Desenvolvimento do Projeto](#desenvolvimento-do-projeto)
-* [Créditos e Referências](#créditos-e-referências)
+* [Referências e Materiais de Apoio](#referências-e-materiais-de-apoio)
 
 ## Introdução
 
@@ -66,13 +66,20 @@ A seguir estão listados os principais recursos empregados no desenvolvimento de
 
 ### Ferramentas
 
-* Visual Studio Code - Ambiente de desenvolvimento integrado - [link](https://code.visualstudio.com/)
-* Git - Sistema de controle de versão - [link](https://git-scm.com/)
-* Github - Plataforma de hospedagem e colaboração em projetos de software - [link](https://github.com/)
-* Pip - Gerenciador de pacotes do Python - [link](https://pypi.org/project/pip/)
-* Venv - Ambiente virtual do Python - [link](https://docs.python.org/pt-br/3/library/venv.html)
-* SQLite Online - SGBD - [link](https://sqliteonline.com/)
-* DB Browser for SQLite - SGBD - [link](https://sqlitebrowser.org/)
+* Visual Studio Code - Ambiente de Desenvolvimento Integrado
+  * [Link site Visual Studio](https://code.visualstudio.com/)
+* Git - Sistema de controle de versão
+  * [Link site do Git](https://git-scm.com/)
+* Github - Plataforma de hospedagem e colaboração em projetos de software
+  * [Link site do Github](https://github.com/)
+* Pip - Gerenciador de pacotes do Python
+  * [Link site do Pip](https://pypi.org/project/pip/)
+* Venv - Ambiente virtual do Python
+  * [Link site do Venv](https://docs.python.org/pt-br/3/library/venv.html)
+* SQLite Online - SGBD
+  * [Link site SQLite Online](https://sqliteonline.com/)
+* DB Browser for SQLite - SGBD
+  * [Link site SQLite Browser](https://sqlitebrowser.org/)
 
 ## Fundamentos Teóricos
 
@@ -92,7 +99,7 @@ A seguir estão destacados alguns dos principais fundamentos teóricos para ente
 
 **5. Segurança embutida:** O Django se preocupa com a segurança, oferecendo proteção contra ataques comuns como SQL *Injection*, *Cross-site Scripting* (XSS), *Cross-site Request Forgery* (CSRF), e *Clickjacking*.
 
-**6. Escalabilidade:** Django é altamente escalável, podendo lidar com grandes volumes de tráfego, como em sites populares que utilizam o framework (por exemplo, Instagram e Pinterest).
+**6. Escalabilidade:** Django é altamente escalável, podendo lidar com grandes volumes de tráfego, como em sites populares que utilizam o framework (por exemplo, Instagram, Pinterest, Spotify, Coursera e Dropbox).
 
 **7. Comunidade ativa e documentação:** Django conta com uma ampla comunidade de desenvolvedores e uma documentação completa e detalhada, facilitando a resolução de problemas e o aprendizado.
 
@@ -166,11 +173,7 @@ No modelo MVT do Django, as requisições seguem um fluxo bem definido, onde cad
 
 * **Resposta (HTTP Response)**: Depois que o Template é renderizado, a View retorna uma resposta HTTP (normalmente uma página HTML ou dados JSON em APIs) ao navegador ou cliente. Essa resposta contém o conteúdo processado e visualizado pelo usuário.
 
-A figura abaixo detalha o fluxo descrito acima.
-
-![Arquitetura MVT - Requisição](./docs/mvt-2.png)
-
-A figura abaixo detalha ainda mais a arquitetura MVT e as tecnologias envolvidas.
+A figura abaixo detalha o fluxo de comunicação, a arquitetura MVT e as tecnologias envolvidas.
 
 ![Arquitetura MVT - Detalhes](./docs/mvt-3.png)
 
@@ -250,12 +253,6 @@ Ative o ambiente virtual no seu computador utilizando o comando:
 source venv/bin/activate
 ```
 
-Para sair do ambiente virtual:
-
-```bash
-deactivate
-```
-
 ### Fluxo de Trabalho no Django
 
 A seguir, descreve-se um fluxo de trabalho que pode ser adotado durante o desenvolvimento de projetos com o framework Django.
@@ -264,7 +261,7 @@ A seguir, descreve-se um fluxo de trabalho que pode ser adotado durante o desenv
 
 ### Instalar o Django
 
-Instale o Django dentro do ambiente virtual criado (testado na versão 5.0):
+Instale o Django dentro do ambiente virtual criado (testado na versão 5.0 até a 6.1):
 
 ```bash
 python3 -m pip install django
@@ -343,29 +340,29 @@ python3 manage.py startapp biblioteca
 A estrutura de diretórios de um projeto Django é organizada de maneira a separar os diferentes componentes da aplicação, facilitando o desenvolvimento e a manutenção. A seguir, temos a estrutura geral de diretórios de um projeto feito em Django.
 
 ```text
-mysite/
+portal_biblioteca/
 │
 ├── manage.py
-├── mysite/
+├── portal_biblioteca/
 │   ├── __init__.py
 │   ├── asgi.py
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
-├── myapp1/
+├── biblioteca/
 │   ├── migrations/
-│   ├── templates/
 │   ├── __init__.py
+│   ├── templates/
 │   ├── admin.py
 │   ├── apps.py
 │   ├── models.py
 │   ├── views.py
 │   ├── urls.py
 │   └── tests.py
-├── myapp2/
+├── usuario/
 │   ├── migrations/
-│   ├── templates/
 │   ├── __init__.py
+│   ├── templates/
 │   ├── admin.py
 │   ├── apps.py
 │   ├── models.py
@@ -376,16 +373,16 @@ mysite/
 ```
 
 * **manage.py**: Um script que permite interagir com o projeto Django a partir da linha de comando. Ele é usado para executar comandos como iniciar o servidor, migrar o banco de dados e criar superusuários.
-* **mysite/**: Esta pasta contém os arquivos de configuração e o núcleo do projeto Django. Normalmente, o nome da pasta do projeto coincide com o nome do projeto. Aqui estão os arquivos comuns:
+* **portal_biblioteca/**: Esta pasta contém os arquivos de configuração e o núcleo do projeto Django. Normalmente, o nome da pasta do projeto coincide com o nome do projeto. Aqui estão os arquivos comuns:
   * **__init__.py**: Indica ao Python que essa pasta deve ser tratada como um pacote.
   * **asgi.py**: Ponto de entrada para servidores ASGI (usado para rodar a aplicação em modo assíncrono).
   * **settings.py**: Arquivo de configuração onde você define parâmetros como a conexão com o banco de dados, apps instalados, middleware, etc.
   * **urls.py**: Arquivo que define os mapeamentos de URL do projeto para as views.
   * **wsgi.py**: Ponto de entrada para servidores WSGI (usado para rodar a aplicação em modo síncrono).
-* **myapp/**: O Django incentiva o uso de uma abordagem modular, onde a funcionalidade de uma aplicação é dividida em "apps" individuais. Cada app tem sua própria pasta dentro do projeto e contém a lógica de uma parte específica do sistema.
+* **biblioteca/**: O Django incentiva o uso de uma abordagem modular, onde a funcionalidade de uma aplicação é dividida em "apps" individuais. Cada app tem sua própria pasta dentro do projeto e contém a lógica de uma parte específica do sistema.
   * **migrations/**: Contém arquivos de migração que Django usa para gerenciar o banco de dados. Cada migração reflete uma mudança no modelo de dados.
-  * **templates/**: Essa pasta contém os arquivos HTML que serão renderizados pelas views. Cada app pode ter sua própria pasta `templates/` ou você pode criar uma pasta `templates/` global na raiz do projeto.
   * **__init__.py**: Marca a pasta como um pacote Python.
+  * **templates/**: Essa pasta contém os arquivos HTML que serão renderizados pelas views. Cada app pode ter sua própria pasta `templates/` ou você pode criar uma pasta `templates/` global na raiz do projeto.
   * **admin.py**: Define como os modelos do app serão exibidos na interface administrativa do Django.
   * **apps.py**: Define a configuração do app.
   * **models.py**: Contém a definição dos modelos (classes) que representam as tabelas do banco de dados.
@@ -535,7 +532,7 @@ Edite o arquivo HTML `biblioteca/templates/principal.html` e substitua o conteú
 
 **Explicação do Código HTML:**
 
-* `{% load static %}`: carrega, para o template atual, a biblioteca de template tags responsável por resolver o caminho lógico de arquivos estáticos (CSS, JavaScript, imagens).
+* `{% load static %}`: carrega, para o template atual, a estrutura responsável por resolver o caminho lógico de arquivos estáticos (CSS, JavaScript, imagens).
 * `{% static 'mystyles.css' %}`: resolve o caminho lógico do arquivo estático `mystyles.css` para ser utilizado no projeto.
 * `{% static 'logo-portal.png' %}`: resolve o caminho lógico do arquivo estático `logo-portal.png` para ser utilizado no projeto.
 
@@ -609,7 +606,7 @@ a:link, a:visited {
 }
 ```
 
-Copie o arquivo `logo-portal.png` (obtido no repositório, pasta `docs`) para a pasta `staticfiles`.
+Copie o arquivo `logo-portal.png` (obtido no repositório, pasta `recursos`) para a pasta `staticfiles`.
 
 Ao final do arquivo `portal_biblioteca/settings.py`, inclua:
 
@@ -986,7 +983,7 @@ urlpatterns = [
 ]
 ```
 
-**Explicação:** o código `path('tccs/detalhes/<int:id>', ...)` cria uma rota que casa URLs do tipo `tccs/detalhes/42` (sem a barra final). O campo `<int:id>` é um path converter e aceita apenas dígitos, converte para `int` e passa à view como parâmetro nomeado `id`. O código `views.tcc_detalhes` descreve a função que será chamada de view que receberá `request` e `id` e retornará a resposta HTTP.
+**Explicação:** o código `path('tccs/detalhes/<int:id>', ...)` cria uma rota que casa URLs do tipo `tccs/detalhes/42` (sem a barra final). O campo `<int:id>` é um path converter e aceita apenas dígitos, converte para `int` e passa à view como parâmetro nomeado `id`. O código `views.tcc_detalhes` descreve a função que será chamada na view e que receberá `request` e `id` e retornará a resposta HTTP.
 
 Execute o servidor de desenvolvimento:
 
@@ -1272,7 +1269,9 @@ python3 manage.py runserver
 
 Acesse: [http://127.0.0.1:8000/dashboard](http://127.0.0.1:8000/dashboard) e analise o resultado.
 
-Nessa etapa, desejamos também colocar um gráfico de pizza no nosso dashboard.
+### Adicionar Novos Gráficos no Dashboard
+
+Nessa etapa, iremos colocar um gráfico de pizza no nosso dashboard.
 
 Edite o arquivo de `biblioteca/templates/dashboard.html` e coloque o conteúdo:
 
@@ -1351,11 +1350,11 @@ Acesse: [http://127.0.0.1:8000/dashboard](http://127.0.0.1:8000/dashboard) e ana
 
 Para mais informações sobre gráficos em JavaScript, consulte a documentação da biblioteca [chart.js](https://www.chartjs.org/).
 
-## Créditos e Referências
+## Referências e Materiais de Apoio
 
 <a href="#índice"><img align="right" width="15" height="15" src="./docs/up-arrow.png" alt="Voltar para topo"></a>
 
-Este tutorial foi inspirado nos seguintes materiais:
+Este tutorial foi baseado nos seguintes materiais:
 
 * [Documentação oficial do Django](https://docs.djangoproject.com/pt-br/5.0/)
 * [Curso de Django da W3Schools](https://www.w3schools.com/django/index.php)
