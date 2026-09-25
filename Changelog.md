@@ -13,3 +13,5 @@ Todas as mudanças neste projeto serão documentadas neste arquivo.
 ## 2026-2
 
 * Ajustes na escrita e didática do tutorial.
+* Reorganização de nomes staticfiles -> static.
+* Reorganização de nomes productionfiles -> staticfiles.

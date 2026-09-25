@@ -340,39 +340,42 @@ python3 manage.py startapp biblioteca
 A estrutura de diretórios de um projeto Django é organizada de maneira a separar os diferentes componentes da aplicação, facilitando o desenvolvimento e a manutenção. A seguir, temos a estrutura geral de diretórios de um projeto feito em Django.
 
 ```text
-portal_biblioteca/
+🗂️ portal_biblioteca/
 │
-├── manage.py
-├── portal_biblioteca/
-│   ├── __init__.py
-│   ├── asgi.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-├── biblioteca/
-│   ├── migrations/
-│   ├── __init__.py
-│   ├── templates/
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── views.py
-│   ├── urls.py
-│   └── tests.py
-├── usuario/
-│   ├── migrations/
-│   ├── __init__.py
-│   ├── templates/
-│   ├── admin.py
-│   ├── apps.py
-│   ├── models.py
-│   ├── views.py
-│   ├── urls.py
-│   └── tests.py
-└── static/
+├── 📄 manage.py
+├── 📄 db.sqlite3
+├── 📂 portal_biblioteca/
+│   ├── 📄 __init__.py
+│   ├── 📄 asgi.py
+│   ├── 📄 settings.py
+│   ├── 📄 urls.py
+│   └── 📄 wsgi.py
+├── 📂 biblioteca/
+│   ├── 📂 migrations/
+│   ├── 📂 templates/
+│   ├── 📄 __init__.py
+│   ├── 📄 admin.py
+│   ├── 📄 apps.py
+│   ├── 📄 models.py
+│   ├── 📄 views.py
+│   ├── 📄 urls.py
+│   └── 📄 tests.py
+├── 📂 usuarios/
+│   ├── 📂 migrations/
+│   ├── 📂 templates/
+│   ├── 📄 __init__.py
+│   ├── 📄 admin.py
+│   ├── 📄 apps.py
+│   ├── 📄 models.py
+│   ├── 📄 views.py
+│   ├── 📄 urls.py
+│   └── 📄 tests.py
+├── 📂 static/
+└── 📂 staticfiles/
 ```
 
 * **manage.py**: Um script que permite interagir com o projeto Django a partir da linha de comando. Ele é usado para executar comandos como iniciar o servidor, migrar o banco de dados e criar superusuários.
+* **db.sqlite3**: Banco de dados SQLite usado para durante a etapa de desenvolvimento.
 * **portal_biblioteca/**: Esta pasta contém os arquivos de configuração e o núcleo do projeto Django. Normalmente, o nome da pasta do projeto coincide com o nome do projeto. Aqui estão os arquivos comuns:
   * **__init__.py**: Indica ao Python que essa pasta deve ser tratada como um pacote.
   * **asgi.py**: Ponto de entrada para servidores ASGI (usado para rodar a aplicação em modo assíncrono).
@@ -390,6 +393,7 @@ portal_biblioteca/
   * **urls.py**: Define as rotas específicas para as views deste app.
   * **tests.py**: Contém testes automatizados para a aplicação.
 * **static/**: Essa pasta contém arquivos estáticos, como CSS, JavaScript e imagens. Os arquivos dentro de `static/` são usados para a apresentação visual da aplicação.
+* **staticfiles/**: Essa pasta contém arquivos estáticos reunidos para o ambiente de produção.
 
 ### Criar a Primeira View
 
@@ -402,6 +406,8 @@ from django.http import HttpResponse
 def principal(request):
     return HttpResponse("Olá Mundo! - Portal Biblioteca")
 ```
+
+O código acima irá exibir na tela uma mensagem de boas vindas.
 
 Crie um arquivo `urls.py` na pasta `biblioteca` com o conteúdo:
 
@@ -510,7 +516,7 @@ Edite o arquivo HTML `biblioteca/templates/principal.html` e substitua o conteú
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="{% static 'mystyles.css' %}"> 
+        <link rel="stylesheet" href="{% static 'styles.css' %}"> 
         <title>Portal Biblioteca</title>
     </head>
     <body>
@@ -533,80 +539,80 @@ Edite o arquivo HTML `biblioteca/templates/principal.html` e substitua o conteú
 **Explicação do Código HTML:**
 
 * `{% load static %}`: carrega, para o template atual, a estrutura responsável por resolver o caminho lógico de arquivos estáticos (CSS, JavaScript, imagens).
-* `{% static 'mystyles.css' %}`: resolve o caminho lógico do arquivo estático `mystyles.css` para ser utilizado no projeto.
+* `{% static 'styles.css' %}`: resolve o caminho lógico do arquivo estático `styles.css` para ser utilizado no projeto.
 * `{% static 'logo-portal.png' %}`: resolve o caminho lógico do arquivo estático `logo-portal.png` para ser utilizado no projeto.
 
-Na raiz do projeto (`code`), crie as pastas `staticfiles` e `productionfiles`.
+Na raiz do projeto (`code`), crie as pastas `static` e `staticfiles`.
 
-Crie o arquivo `staticfiles/mystyles.css` com o conteúdo abaixo:
+Crie o arquivo `static/styles.css` com o conteúdo abaixo:
 
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
 body {
-  margin: 0;
-  font: 600 18px 'Source Sans Pro', sans-serif;
-  letter-spacing: 0.64px;
-  color: #585d74;
+    margin: 0;
+    font: 600 18px 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.64px;
+    color: #585d74;
 }
 .topnav {
-  background-color: #375BDC;
-  color: #ffffff;
-  padding: 10px;
+    background-color: #375BDC;
+    color: #ffffff;
+    padding: 10px;
 }
 .topnav a:link, .topnav a:visited {
-  text-decoration: none;
-  color: #ffffff; 
+    text-decoration: none;
+    color: #ffffff; 
 }
 .topnav a:hover, .topnav a:active {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 .mycard {
-  background-color: #f1f1f1;
-  background-image: linear-gradient(to bottom, #375BDC, #4D70EF); 
-  background-size: 100% 120px;
-  background-repeat: no-repeat;
-  margin: 40px auto;
-  width: 600px;
-  border-radius: 5px;
-  box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23); 
-  padding: 20px;
+    background-color: #f1f1f1;
+    background-image: linear-gradient(to bottom, #375BDC, #4D70EF); 
+    background-size: 100% 120px;
+    background-repeat: no-repeat;
+    margin: 40px auto;
+    width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23); 
+    padding: 20px;
 }
 .mycard h1 {
-  text-align: center;
-  color:#ffffff;
-  margin: 20px 0 60px 0;
+    text-align: center;
+    color:#ffffff;
+    margin: 20px 0 60px 0;
 }
 ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 li {
-  background-color: #ffffff;
-  background-image: linear-gradient(to right, #375BDC, #4D70EF); 
-  background-size: 50px 60px;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  transition: transform .25s;
-  border-radius: 5px;
-  box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
-  padding: 15px;
-  padding-left: 70px;
-  margin-top: 5px;
+    background-color: #ffffff;
+    background-image: linear-gradient(to right, #375BDC, #4D70EF); 
+    background-size: 50px 60px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: transform .25s;
+    border-radius: 5px;
+    box-shadow: 0 5px 7px -1px rgba(51, 51, 51, 0.23);
+    padding: 15px;
+    padding-left: 70px;
+    margin-top: 5px;
 }
 li:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 a:link, a:visited {
-  color: #375BDC; 
+    color: #375BDC; 
 }
 .main, .main h1 {
-  text-align:center;
-  color:#375BDC;
+    text-align:center;
+    color:#375BDC;
 }
 ```
 
-Copie o arquivo `logo-portal.png` (obtido no repositório, pasta `recursos`) para a pasta `staticfiles`.
+Copie o arquivo `logo-portal.png` (obtido no repositório, pasta `recursos`) para a pasta `static`.
 
 Ao final do arquivo `portal_biblioteca/settings.py`, inclua:
 
@@ -617,11 +623,11 @@ STATIC_URL = 'static/'
 
 # as linhas abaixo devem ser acrescentadas
 
-STATIC_ROOT = BASE_DIR / 'productionfiles'
-
 STATICFILES_DIRS = [
-    BASE_DIR / 'staticfiles'
+    BASE_DIR / 'static'
 ]
+
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 ```
 
 Em seguida, execute o comando abaixo:
@@ -630,7 +636,7 @@ Em seguida, execute o comando abaixo:
 python3 manage.py collectstatic
 ```
 
-**Explicação:** o comando acima informa ao Django para entrar nas pastas com arquivos estáticos (`staticfiles`) e fazer uma cópia de todos os arquivos dessas pastas para a pasta `productionfiles`. Os arquivos estáticos incluem, por exemplo, arquivos CSS, JavaScript, imagens e outros recursos que não são gerados dinamicamente pelo Django, mas são servidos diretamente pelo servidor web. A principal finalidade do comando `collectstatic` é preparar os arquivos estáticos para implantação em um ambiente de produção. Quando você está desenvolvendo localmente, os arquivos estáticos podem estar espalhados em diferentes diretórios dentro de cada aplicativo, o que não é eficiente para servir em produção. Portanto, você coleta todos esses arquivos em um único local antes de implantar sua aplicação em um servidor web de produção.
+**Explicação:** o comando acima informa ao Django para entrar nas pastas com arquivos estáticos (`static`) e fazer uma cópia de todos os arquivos dessas pastas para a pasta `staticfiles` (usada em produção). Os arquivos estáticos incluem, por exemplo, arquivos CSS, JavaScript, imagens e outros recursos que não são gerados dinamicamente pelo Django, mas são servidos diretamente pelo servidor web. A principal finalidade do comando `collectstatic` é preparar os arquivos estáticos para implantação em um ambiente de produção. Quando você está desenvolvendo localmente, os arquivos estáticos podem estar espalhados em diferentes diretórios dentro de cada aplicativo, o que não é eficiente para servir em produção. Portanto, você coleta todos esses arquivos em um único local antes de implantar sua aplicação em um servidor web de produção.
 
 Execute o servidor de desenvolvimento:
 
@@ -654,7 +660,7 @@ Crie um arquivo HTML `biblioteca/templates/livros.html` e coloque o seguinte con
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="{% static 'mystyles.css' %}"> 
+        <link rel="stylesheet" href="{% static 'styles.css' %}"> 
         <title>Portal Biblioteca - Livros</title>
     </head>
     <body>
@@ -744,6 +750,8 @@ def livros(request):      # função adicionada
 
 **Observação:** no exemplo acima os dados foram inseridos diretamente no Python, no futuro eles virão do Banco de Dados.
 
+**Explicação:** Repare que a função acima tem um parâmetro chamado `request`, esse é sempre o primeiro parâmetro de cada view criada. Esse parâmetro é usado para obter informações sobre a requisição HTTP atual. Pode-se obter com esse parâmetro as seguintes informações: método HTTP (GET, POST, etc.), usuário autenticado, parâmetros enviados pela URL, dados enviador por formulário, etc.
+
 Edite o arquivo `biblioteca/urls.py` e coloque o seguinte conteúdo:
 
 ```python
@@ -774,7 +782,7 @@ Crie um arquivo HTML `biblioteca/templates/tccs.html` e coloque o seguinte conte
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="{% static 'mystyles.css' %}"> 
+        <link rel="stylesheet" href="{% static 'styles.css' %}"> 
         <title>Portal Biblioteca - TCCs</title>
     </head>
     <body>
@@ -880,7 +888,7 @@ Crie um arquivo HTML `biblioteca/templates/tcc_detalhes.html` e coloque o seguin
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="{% static 'mystyles.css' %}"> 
+        <link rel="stylesheet" href="{% static 'styles.css' %}"> 
         <title>Portal Biblioteca - TCC - Detalhes</title>
     </head>
     <body>
@@ -983,7 +991,7 @@ urlpatterns = [
 ]
 ```
 
-**Explicação:** o código `path('tccs/detalhes/<int:id>', ...)` cria uma rota que casa URLs do tipo `tccs/detalhes/42` (sem a barra final). O campo `<int:id>` é um path converter e aceita apenas dígitos, converte para `int` e passa à view como parâmetro nomeado `id`. O código `views.tcc_detalhes` descreve a função que será chamada na view e que receberá `request` e `id` e retornará a resposta HTTP.
+**Explicação:** o código `path('tccs/detalhes/<int:id>', ...)` cria uma rota que casa URLs do tipo `tccs/detalhes/13` (sem a barra final). O campo `<int:id>` é um path converter e aceita apenas dígitos, converte para `int` e passa à view como parâmetro nomeado `id`. O código `views.tcc_detalhes` descreve a função que será chamada na view e que receberá `request` e `id` e retornará a resposta HTTP.
 
 Execute o servidor de desenvolvimento:
 
@@ -1007,7 +1015,7 @@ Crie um arquivo HTML `biblioteca/templates/base.html` e coloque o seguinte conte
 <html>
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="{% static 'mystyles.css' %}"> 
+        <link rel="stylesheet" href="{% static 'styles.css' %}"> 
         <title>{% block titulo %}{% endblock %}</title>
     </head>
     <body>
@@ -1222,11 +1230,11 @@ Atualize o código do `biblioteca/templates/dashboard.html` e coloque o seguinte
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="{% static 'myscripts.js' %}"></script>
+    <script src="{% static 'script.js' %}"></script>
 {% endblock %}
 ```
 
-Crie um arquivo `staticfiles/myscripts.js` e coloque o seguinte conteúdo:
+Crie um arquivo `static/script.js` e coloque o seguinte conteúdo:
 
 ```javascript
 function graficoBarras() {
@@ -1298,11 +1306,11 @@ Edite o arquivo de `biblioteca/templates/dashboard.html` e coloque o conteúdo:
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="{% static 'myscripts.js' %}"></script>
+    <script src="{% static 'script.js' %}"></script>
 {% endblock %}
 ```
 
-Edite o arquivo `staticfiles/myscripts.js` e adicione o seguinte conteúdo:
+Edite o arquivo `staticfiles/script.js` e adicione o seguinte conteúdo:
 
 ```javascript
 ...
