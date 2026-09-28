@@ -457,8 +457,8 @@ Abra o arquivo `biblioteca/templates/principal.html` e insira o conteúdo:
         <title>Portal Biblioteca</title>
     </head>
     <body>
-    <h1>Olá Mundo!</h1>
-    <p>Bem-vindo ao meu primeiro projeto Django!</p>
+        <h1>Olá Mundo!</h1>
+        <p>Bem-vindo ao meu primeiro projeto Django!</p>
     </body>
 </html>
 ```
@@ -1160,19 +1160,19 @@ Crie um arquivo `biblioteca/templates/dashboard.html` e coloque o seguinte conte
         new Chart(ctx, {
             type: 'bar',
             data: {
-            labels: ['Livros', 'TCCs', 'Dissertações', 'Teses', 'Apostilas', 'Jornais'],
-            datasets: [{
-                label: 'Número de Volumes',
-                data: [12, 19, 8, 5, 2, 10],
-                borderWidth: 1
-            }]
+                labels: ['Livros', 'TCCs', 'Dissertações', 'Teses', 'Apostilas', 'Jornais'],
+                datasets: [{
+                    label: 'Número de Volumes',
+                    data: [12, 19, 8, 5, 2, 10],
+                    borderWidth: 1
+                }]
             },
             options: {
-            scales: {
-                y: {
-                    beginAtZero: true
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
                 }
-            }
             }
         });
     </script>
@@ -1243,19 +1243,19 @@ function graficoBarras() {
     new Chart(ctx, {
         type: 'bar',
         data: {
-        labels: ['Livros', 'TCCs', 'Dissertações', 'Teses', 'Apostilas', 'Jornais'],
-        datasets: [{
-            label: 'Número de Volumes',
-            data: [12, 19, 8, 5, 2, 10],
-            borderWidth: 1
-        }]
+            labels: ['Livros', 'TCCs', 'Dissertações', 'Teses', 'Apostilas', 'Jornais'],
+            datasets: [{
+                label: 'Número de Volumes',
+                data: [12, 19, 8, 5, 2, 10],
+                borderWidth: 1
+            }]
         },
         options: {
-        scales: {
-            y: {
-                beginAtZero: true
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
             }
-        }
         }
     });
 }
@@ -1321,20 +1321,20 @@ function graficoPizza(){
     new Chart(ctx, {
         type: 'pie',
         data: {
-        labels: ['Livros', 'TCCs', 'Dissertações', 'Teses', 'Apostilas', 'Jornais'],
-        datasets: [{
-            label: 'Número de Volumes',
-            data: [12, 19, 8, 5, 2, 10],
-            backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(54, 162, 235)',
-                'rgb(255, 205, 86)',
-                'rgb(80, 60, 200)',
-                'rgb(255, 100, 86)',
-                'rgb(54, 255, 150)'
-            ],
-            hoverOffset: 8
-        }]
+            labels: ['Livros', 'TCCs', 'Dissertações', 'Teses', 'Apostilas', 'Jornais'],
+            datasets: [{
+                label: 'Número de Volumes',
+                data: [12, 19, 8, 5, 2, 10],
+                backgroundColor: [
+                    'rgb(255, 99, 132)',
+                    'rgb(54, 162, 235)',
+                    'rgb(255, 205, 86)',
+                    'rgb(80, 60, 200)',
+                    'rgb(255, 100, 86)',
+                    'rgb(54, 255, 150)'
+                ],
+                hoverOffset: 8
+            }]
         }
     });
 }
