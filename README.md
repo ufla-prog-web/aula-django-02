@@ -919,7 +919,7 @@ Edite o arquivo HTML `biblioteca/templates/tccs.html` e inclua o seguinte conte�
             <ul>
                 {% for tcc in tccs %}
                 <!-- Início das linhas editadas -->
-                <li onclick="window.location = 'tccs/detalhes/{{ tcc.id }}'">
+                <li onclick="window.location = '/tccs/detalhes/{{ tcc.id }}'">
                     <em>Título:</em> {{ tcc.titulo }} <br> 
                     <em>Autor:</em> {{ tcc.autor }} 
                 </li>
@@ -1091,7 +1091,7 @@ Modifique a página `tccs.html` e coloque o seguinte conteúdo:
         <h1>Trabalhos de Conclusão de Curso</h1>
         <ul>
             {% for tcc in tccs %}
-            <li onclick="window.location = 'tccs/detalhes/{{ tcc.id }}'">
+            <li onclick="window.location = '/tccs/detalhes/{{ tcc.id }}'">
                 <em>Título:</em> {{ tcc.titulo }} <br> 
                 <em>Autor:</em> {{ tcc.autor }} 
             </li>
